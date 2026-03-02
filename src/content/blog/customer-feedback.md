@@ -7,7 +7,7 @@ image: '/collections/blog/image-02.webp'
 thumbnail: '/collections/blog/image-02.webp'
 ---
 
-You can have the most elegant wireframes and pixel-perfect mockups, but if they haven't been validated with real users, you're designing in the dark. User testing is the bridge between assumption and evidence — and at Suspended Suspended, it's a non-negotiable part of our process.
+You can have the most elegant wireframes and pixel-perfect mockups, but if they haven't been validated with real users, you're designing in the dark. User testing is the bridge between assumption and evidence — and at NUYsDZ!N, it's a non-negotiable part of our process.
 
 The biggest misconception about user testing is that it's expensive and time-consuming. In reality, testing with just five users can uncover 85% of usability issues (as Jakob Nielsen famously demonstrated). A simple 30-minute moderated session with a clickable prototype can save weeks of development rework.
 

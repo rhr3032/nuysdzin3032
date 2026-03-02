@@ -7,7 +7,7 @@ image: '/collections/blog/image-05.webp'
 thumbnail: '/collections/blog/image-05.webp'
 ---
 
-When we start a new project at Suspended Suspended, we almost always begin with the smallest screen. Not because mobile traffic dominates (though for most products, it does), but because designing for constraints first produces better outcomes everywhere.
+When we start a new project at NUYsDZ!N, we almost always begin with the smallest screen. Not because mobile traffic dominates (though for most products, it does), but because designing for constraints first produces better outcomes everywhere.
 
 A mobile screen gives you roughly 360 pixels of width to work with. That's not a lot. Every element must earn its place. There's no room for decorative sidebars, sprawling navigation menus, or walls of text. You're forced to ask the hardest — and most important — design question: what does the user actually need right now?
 

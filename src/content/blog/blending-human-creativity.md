@@ -7,7 +7,7 @@ image: '/collections/blog/image-01.webp'
 thumbnail: '/collections/blog/image-01.webp'
 ---
 
-Every pixel on a screen competes for attention. Understanding how users process visual information, make decisions, and form habits is what separates good design from great design. At Suspended Suspended, we believe that UI design is as much about psychology as it is about aesthetics.
+Every pixel on a screen competes for attention. Understanding how users process visual information, make decisions, and form habits is what separates good design from great design. At NUYsDZ!N, we believe that UI design is as much about psychology as it is about aesthetics.
 
 Cognitive load theory teaches us that users have limited mental bandwidth. When an interface presents too many options, too much information, or unclear visual hierarchies, users feel overwhelmed and disengage. The most effective designs reduce cognitive load by chunking information, using progressive disclosure, and creating clear visual pathways.
 

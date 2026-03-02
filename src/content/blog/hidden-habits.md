@@ -11,7 +11,7 @@ If you've ever used a product where every screen felt slightly different — dif
 
 A design system is the foundation that ensures every component, pattern, and interaction across a product feels like it belongs to the same family. It's not just a Figma library or a set of reusable code components. It's a living, evolving system of principles, guidelines, and tools that aligns everyone — designers, developers, product managers — around a shared visual and functional language.
 
-At Suspended Suspended, we've built design systems for startups with three-person teams and enterprises with dozens of product squads. The needs differ, but the value is universal: consistency, speed, and scalability.
+At NUYsDZ!N, we've built design systems for startups with three-person teams and enterprises with dozens of product squads. The needs differ, but the value is universal: consistency, speed, and scalability.
 
 > A design system isn't a project that ends — it's a product that evolves with your organization.
 

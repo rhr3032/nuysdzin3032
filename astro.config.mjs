@@ -10,7 +10,7 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mizu-theme.netlify.app/",
+  site: "https://nuysdzin3032.vercel.app/",
   integrations: [
     icon(),
     sitemap(),

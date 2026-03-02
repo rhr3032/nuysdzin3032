@@ -23,14 +23,14 @@ export interface Config {
 
 export const configData: Config = {
 	siteTitle:
-		'Suspended Suspended | UI/UX Design Agency — Crafting Digital Experiences That Convert',
+		'NUYsDZ!N | UI/UX Design Agency — Crafting Digital Experiences That Convert',
 	siteDescription:
-		'Suspended Suspended is a premium UI/UX design agency specializing in user-centered design, web & mobile interfaces, design systems, and conversion-focused digital experiences.',
+		'NUYsDZ!N is a premium UI/UX design agency specializing in user-centered design, web & mobile interfaces, design systems, and conversion-focused digital experiences.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo-light.svg',
 		srcDark: '/logo-dark.svg',
-		alt: 'Suspended Suspended logo'
+		alt: 'NUYsDZ!N logo'
 	},
 	canonical: true,
 	noindex: false,
