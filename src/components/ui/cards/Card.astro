@@ -20,7 +20,6 @@
 
 // Components
 // - UI
-import { Image } from 'astro:assets'
 import CardContainer from './partials/CardContainer.astro'
 
 // Props
@@ -80,7 +79,7 @@ const wrapperProps = orientation === 'horizontal' ? { class: 'card__content' } :
 					{ [`card__media--parallax`]: mediaEffect === 'parallax' }
 				]}
 			>
-				<Image src={image} alt={title} inferSize />
+				<img src={image} alt={title} />
 			</div>
 		)
 	}
