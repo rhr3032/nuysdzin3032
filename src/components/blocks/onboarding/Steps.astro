@@ -12,7 +12,6 @@ import Col from '../../ui/Col.astro'
 // - UI
 import Header from '../../ui/Header.astro'
 import Link from '../../ui/Link.astro'
-import { Image } from 'astro:assets'
 import DecorationBorder from '../../ui/DecorationBorder.astro'
 
 // - Types
@@ -50,28 +49,15 @@ const { data: passed } = Astro.props
 const data: StepperData =
 	passed ?? (await import('../../../data/json-files/onboardingData.json')).default
 
-// - Image resolution
-const imageMap = import.meta.glob('/src/assets/**/*.{png,jpg,jpeg,webp,avif,gif,svg}', {
-	eager: true,
-	import: 'default'
-}) as Record<string, ImageMetadata>
-
-const resolveAsset = (jsonPath?: string): ImageMetadata | null => {
-	if (!jsonPath) return null
-	const key = '/src/assets' + jsonPath
-	return imageMap[key] ?? null
-}
-
-const steps = data.steps.map((s) => ({
-	...s,
-	_frontAsset: resolveAsset(s.media?.front?.src),
-	_backAsset: resolveAsset(s.media?.back?.src)
-}))
+// Note: Images are stored in /public/steps/steps/ folder for proper deployment
+// The JSON file contains public paths like /steps/steps/step_01_front.webp
+// When Astro assets are not available (due to build/deployment), we use the public paths directly
+const steps = data.steps
 ---
 
 <Section classes="stepper overflow-visible!">
 	<Row style="transparent">
-		<Col span="12" classes="pt-16 lg:pt-24 ">
+		<Col span="12" classes="pt-8 md:pt-16 lg:pt-24 ">
 			<Header
 				title={data.title}
 				headingLevel="h2"
@@ -110,50 +96,28 @@ const steps = data.steps.map((s) => ({
 							{step.media && (
 								<figure class="stepper__media scroll-animate">
 									{/* Back image */}
-									{step.media.back &&
-										(step._backAsset ? (
-											<Image
-												class="stepper__media-back"
-												src={step._backAsset}
-												alt={step.media.back.alt}
-												loading="lazy"
-												decoding="async"
-												layout="constrained"
-											/>
-										) : (
-											<img
-												class="stepper__media-back"
-												src={step.media.back.src}
-												alt={step.media.back.alt}
-												loading="lazy"
-												decoding="async"
-											/>
-										))}
+									{step.media.back && (
+										<img
+											class="stepper__media-back"
+											src={step.media.back.src}
+											alt={step.media.back.alt}
+											loading="lazy"
+											decoding="async"
+										/>
+									)}
 
 									{/* Front image */}
-									{step.media.front &&
-										(step._frontAsset ? (
-											<div class="parallax">
-												<Image
-													class="stepper__media-front"
-													src={step._frontAsset}
-													alt={step.media.front.alt}
-													loading="lazy"
-													decoding="async"
-													layout="constrained"
-												/>
-											</div>
-										) : (
-											<div class="parallax">
-												<img
-													class="stepper__media-front"
-													src={step.media.front.src}
-													alt={step.media.front.alt}
-													loading="lazy"
-													decoding="async"
-												/>
-											</div>
-										))}
+									{step.media.front && (
+										<div class="parallax">
+											<img
+												class="stepper__media-front"
+												src={step.media.front.src}
+												alt={step.media.front.alt}
+												loading="lazy"
+												decoding="async"
+											/>
+										</div>
+									)}
 									<DecorationBorder type="left right" style="solid" />
 								</figure>
 							)}

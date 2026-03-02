@@ -87,11 +87,11 @@
 "cta": { "label": "Start your project", "href": "/contact" },
 "media": {
 "front": {
-"src": "/steps/steps/step_02_front.webp",
+"src": "/steps/steps/step_04_front.webp",
 "alt": "Test, Refine & Launch phase"
 },
 "back": {
-"src": "/steps/steps/step_02_back.webp",
+"src": "/steps/steps/step_04_back.webp",
 "alt": "Test, Refine & Launch phase"
 }
 }
