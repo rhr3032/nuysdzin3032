@@ -1,0 +1,143 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+// - Blocks
+import Hero from '../components/blocks/hero/SimpleHeroNeutral.astro'
+import SectionSticky from '../components/blocks/basic/StickySidebarTransparent.astro'
+// - UI
+import Header from '../components/ui/Header.astro'
+
+// Content
+// - SEO
+const SEO = {
+title: 'Suspended Suspended | Terms & Conditions',
+description:
+'Review the terms and conditions for engaging Suspended Suspended for UI/UX design services, including project scope, deliverables, and intellectual property.'
+}
+// - Hero
+const heroData = {
+title: 'Clear and Fair Terms for Working Together',
+subtitle: 'Terms & Conditions',
+text: 'These Terms and Conditions outline the general guidelines, responsibilities, and expectations for working with Suspended Suspended. Please review them carefully before engaging our services.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+<Hero
+title={heroData.title}
+subtitle={heroData.subtitle}
+text={heroData.text}
+textClasses="max-w-xl!"
+/>
+<SectionSticky>
+<Header
+title="About This Agreement"
+subtitle="Introduction"
+headingLevel="h2"
+titleClasses="bg-white dark:bg-neutral-950"
+slot="sidebar"
+/>
+<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+<Col span="12" style="transparent">
+<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+<h3>Welcome to Suspended Suspended</h3>
+<p>
+Thank you for choosing Suspended Suspended as your UI/UX design partner. We are a design agency dedicated to creating exceptional digital experiences that serve real users and drive measurable business outcomes.
+</p>
+<p>
+These Terms and Conditions govern the relationship between Suspended Suspended ("we", "us", "our") and our clients ("you", "your") when engaging our design services. By working with us, you agree to these terms.
+</p>
+<h3>Acceptance of Terms</h3>
+<p>
+By engaging our services, signing a proposal or statement of work, or making a payment, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please discuss your concerns with us before proceeding.
+</p>
+<p>
+We may update these terms from time to time. Any changes will be communicated via email or posted on our website. Continued engagement with our services after changes have been published constitutes acceptance of the revised terms.
+</p>
+<h3>Our Commitment to You</h3>
+<p>
+At Suspended Suspended, we are committed to delivering high-quality, user-centered design work. We treat every project as a partnership, maintaining open communication, meeting agreed-upon deadlines, and striving to exceed expectations at every stage.
+</p>
+<p>
+We value transparency and honesty. If something changes on our end that may affect your project, we will communicate it promptly and work together to find the best path forward.
+</p>
+</div>
+</Col>
+</Row>
+</SectionSticky>
+<SectionSticky>
+<Header
+title="Project Scope and Deliverables"
+subtitle="Engagement Terms"
+headingLevel="h2"
+titleClasses="bg-white dark:bg-neutral-950"
+slot="sidebar"
+/>
+<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+<Col span="12" style="transparent">
+<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+<h3>Scope of Work</h3>
+<p>
+All design engagements begin with a defined scope of work documented in a project proposal or statement of work (SOW). This document outlines the objectives, deliverables, timeline, milestones, and associated costs for the project.
+</p>
+<p>
+Work outside the agreed scope may require a change order or addendum, which will be documented and agreed upon by both parties before proceeding. We reserve the right to adjust timelines and costs if the scope changes significantly.
+</p>
+<h3>Deliverables and Revisions</h3>
+<p>
+Deliverables will be provided in industry-standard formats (Figma files, design specifications, prototypes, etc.) as outlined in the SOW. Each project phase includes a defined number of revision rounds to ensure alignment with your vision.
+</p>
+<p>
+Additional revision rounds beyond what is specified in the SOW may incur additional charges. We will always communicate any potential additional costs before proceeding with extra work.
+</p>
+<h3>Client Responsibilities</h3>
+<p>
+Timely feedback and provision of required assets (brand guidelines, content, imagery, etc.) are essential for keeping the project on schedule. Delays in feedback or asset delivery may result in adjusted timelines.
+</p>
+<p>
+You are responsible for ensuring that all content and materials provided to us do not infringe upon the intellectual property rights of any third party.
+</p>
+</div>
+</Col>
+</Row>
+</SectionSticky>
+<SectionSticky>
+<Header
+title="General Restrictions and Liability"
+subtitle="Limitations and Liability"
+headingLevel="h2"
+titleClasses="bg-white dark:bg-neutral-950"
+slot="sidebar"
+/>
+<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+<Col span="12" style="transparent">
+<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+<h3>Intellectual Property</h3>
+<p>
+Upon full payment, all final design deliverables and associated intellectual property rights are transferred to you. We retain the right to showcase the work in our portfolio and marketing materials unless otherwise agreed in writing.
+</p>
+<p>
+Work-in-progress files, unused concepts, and preliminary sketches remain the property of Suspended Suspended unless explicitly included in the deliverables outlined in the SOW.
+</p>
+<h3>Limitation of Liability</h3>
+<p>
+Suspended Suspended provides design services on a best-effort basis. We are not liable for indirect, incidental, special, consequential, or punitive damages arising from or related to our services, including but not limited to loss of revenue, data, or business opportunities.
+</p>
+<p>
+Our total liability for any claims arising from our services shall not exceed the total fees paid by you for the specific project giving rise to the claim. This limitation applies regardless of the legal theory under which the claim is made.
+</p>
+<h3>Third-Party Tools and Services</h3>
+<p>
+Our design process may involve the use of third-party tools, plugins, or services (e.g., Figma, stock imagery, font licenses). We are not responsible for the terms, availability, or performance of these third-party services.
+</p>
+<p>
+Any third-party licenses required for your project (such as premium fonts or stock photography) will be identified during the project and procured separately by you unless otherwise agreed.
+</p>
+</div>
+</Col>
+</Row>
+</SectionSticky>
+</Layout>

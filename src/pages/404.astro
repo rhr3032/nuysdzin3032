@@ -1,0 +1,41 @@
+---
+// 404 Page
+// ------------
+// Description: The 404 page is a page that displays when a page is not found.
+
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - Blocks
+import BasicHeroSplitImageCTA from '../components/blocks/hero/BasicHeroSplitImageCTA.astro'
+
+// Content
+// - Images
+import image from '../assets/404.webp'
+// - SEO
+const SEO = {
+	title: 'Page Not Found — Suspended Suspended',
+	description:
+		'This page doesn\'t exist. Head back to explore our UI/UX design services, projects, and more.'
+}
+// - Hero data
+const heroData = {
+	title: 'This page got lost in the wireframes',
+	subtitle: '404 — Page Not Found',
+	text: 'Looks like this page doesn\'t exist. Don\'t worry — let\'s get you back on track to explore our work and services.',
+	image: image,
+	buttonText: 'Back to Homepage',
+	buttonLink: '/'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<BasicHeroSplitImageCTA
+		subtitle={heroData.subtitle}
+		title={heroData.title}
+		text={heroData.text}
+		image={heroData.image}
+		buttonText={heroData.buttonText}
+		buttonLink={heroData.buttonLink}
+	/>
+</Layout>

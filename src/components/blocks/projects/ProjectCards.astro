@@ -1,0 +1,38 @@
+---
+// Project Cards Grid
+// ------------
+// Components
+import Section from '../../../components/ui/Section.astro'
+import Row from '../../../components/ui/Row.astro'
+import Col from '../../../components/ui/Col.astro'
+import ProjectCard from '../../../components/ui/cards/ProjectCard.astro'
+
+// Props
+type Props = {
+	data: any
+}
+const { data: projects } = Astro.props
+---
+
+<Section>
+	<Row>
+		{
+			projects.map((project: any, index: number) => {
+				return (
+					<Col span={index === 0 || index === 1 ? '6' : '4'}>
+						<ProjectCard
+							title={project.data.title}
+							image={index < 2 && project.data.thumbnail ? project.data.thumbnail : ''}
+							link={`/projects/${project.id}`}
+							client={project.data.client}
+							category={project.data.category}
+							description={project.data.description}
+							services={project.data.services}
+							classes="h-full"
+						/>
+					</Col>
+				)
+			})
+		}
+	</Row>
+</Section>

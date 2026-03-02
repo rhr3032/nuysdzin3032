@@ -1,0 +1,147 @@
+---
+// Privacy Policy Page
+// ------------
+// Description: Privacy policy page for the design agency
+
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+// - Blocks
+import Hero from '../components/blocks/hero/SimpleHeroNeutral.astro'
+import SectionSticky from '../components/blocks/basic/StickySidebarTransparent.astro'
+// - UI
+import Header from '../components/ui/Header.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'Suspended Suspended | Privacy Policy',
+	description:
+		'Learn how Suspended Suspended collects, uses, and protects your personal information when you use our website or engage our UI/UX design services.'
+}
+// - Hero
+const heroData = {
+	title: 'How We Protect Your Information',
+	subtitle: 'Privacy Policy',
+	text: 'Your privacy matters to us. This policy explains how Suspended Suspended collects, uses, stores, and protects your personal information when you visit our website or work with us.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		title={heroData.title}
+		subtitle={heroData.subtitle}
+		text={heroData.text}
+		textClasses="max-w-xl!"
+	/>
+	<SectionSticky>
+		<Header
+			title="What We Collect and Why"
+			subtitle="Information Collection"
+			headingLevel="h2"
+			titleClasses="bg-white dark:bg-neutral-950"
+			slot="sidebar"
+		/>
+		<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+			<Col span="12" style="transparent">
+				<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+					<h3>Information You Provide</h3>
+					<p>
+						When you contact us through our website, sign up for our newsletter, or engage our services, we may collect personal information such as your name, email address, phone number, company name, and project details. This information is provided voluntarily and is used solely to communicate with you and deliver our services.
+					</p>
+					<p>
+						We also collect information you provide during the course of a design engagement, including feedback, brand assets, and content materials. This information is used exclusively for your project and is not shared with third parties without your consent.
+					</p>
+					<h3>Information Collected Automatically</h3>
+					<p>
+						When you visit our website, we may automatically collect certain technical information, including your IP address, browser type, operating system, referring URLs, and pages visited. This data is collected through cookies and similar technologies to help us understand how visitors use our website and improve the user experience.
+					</p>
+					<p>
+						We use analytics tools such as Google Analytics to gather aggregated, anonymous usage data. This information does not personally identify you and is used solely for website optimization and performance monitoring.
+					</p>
+					<h3>Cookies</h3>
+					<p>
+						Our website uses cookies — small text files stored on your device — to enhance your browsing experience and remember your preferences (such as dark/light mode). You can control cookie settings through your browser at any time.
+					</p>
+					<p>
+						We use essential cookies required for the website to function properly, as well as optional analytics cookies that help us understand how visitors interact with our site. You may opt out of non-essential cookies without affecting your ability to use our website.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</SectionSticky>
+	<SectionSticky>
+		<Header
+			title="How We Use and Share Data"
+			subtitle="Data Usage"
+			headingLevel="h2"
+			titleClasses="bg-white dark:bg-neutral-950"
+			slot="sidebar"
+		/>
+		<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+			<Col span="12" style="transparent">
+				<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+					<h3>How We Use Your Information</h3>
+					<p>
+						We use the information we collect to: respond to your inquiries, deliver design services, send project updates and invoices, improve our website and services, and comply with legal obligations. We will never sell your personal information to third parties.
+					</p>
+					<p>
+						If you subscribe to our newsletter or blog, we may use your email address to send periodic updates about design trends, case studies, and agency news. You can unsubscribe at any time by clicking the unsubscribe link in any email.
+					</p>
+					<h3>Data Sharing</h3>
+					<p>
+						We do not share your personal information with third parties except in the following circumstances: when required by law, with your explicit consent, or with trusted service providers who assist us in operating our website and delivering our services (such as email providers or analytics tools).
+					</p>
+					<p>
+						All third-party service providers we work with are required to maintain the confidentiality of your information and are prohibited from using it for any purpose other than providing services on our behalf.
+					</p>
+					<h3>Data Retention</h3>
+					<p>
+						We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy or as required by law. Project-related files and communications are typically retained for up to three years after project completion to facilitate future engagements.
+					</p>
+					<p>
+						You may request the deletion of your personal data at any time by contacting us at hello@suspended.design. We will process your request within 30 days, subject to any legal retention requirements.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</SectionSticky>
+	<SectionSticky>
+		<Header
+			title="Security and Your Rights"
+			subtitle="Data Protection"
+			headingLevel="h2"
+			titleClasses="bg-white dark:bg-neutral-950"
+			slot="sidebar"
+		/>
+		<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+			<Col span="12" style="transparent">
+				<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+					<h3>Security Measures</h3>
+					<p>
+						We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. This includes encrypted communications (SSL/TLS), secure file sharing, and access controls for sensitive data.
+					</p>
+					<p>
+						While we take reasonable precautions to protect your data, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security but are committed to promptly addressing any breaches that may occur.
+					</p>
+					<h3>Your Rights</h3>
+					<p>
+						Depending on your jurisdiction, you may have the right to: access the personal data we hold about you, request correction of inaccurate data, request deletion of your data, object to or restrict certain processing, and receive your data in a portable format.
+					</p>
+					<p>
+						To exercise any of these rights, please contact us at hello@suspended.design. We will respond to your request within 30 days. If you are located in the European Economic Area (EEA), you also have the right to lodge a complaint with your local data protection authority.
+					</p>
+					<h3>Changes to This Policy</h3>
+					<p>
+						We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. Any significant changes will be communicated through our website or via email. Your continued use of our website or services after changes are posted constitutes acceptance of the updated policy.
+					</p>
+					<p>
+						This policy was last updated in January 2026. If you have any questions about this Privacy Policy, please contact us at hello@suspended.design.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</SectionSticky>
+</Layout>

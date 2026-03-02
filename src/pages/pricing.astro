@@ -1,0 +1,59 @@
+---
+// Home Page
+// ------------
+// Description: The home page is a page that displays the most important information.
+
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+
+// - Blocks
+import Hero from '../components/blocks/hero/SimpleHeroBasic.astro'
+import BasicTable from '../components/blocks/pricing/BasicTable.astro'
+import Brand from '../components/blocks/brand/Marquee.astro'
+import Faq from '../components/blocks/faq/StickyFaq.astro'
+import CTA from '../components/blocks/cta/CTAPrimary.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'Suspended Suspended | Pricing',
+	description:
+		'Transparent pricing for UI/UX design services. Choose the engagement model that fits your project scope — from one-off sprints to ongoing design partnerships.'
+}
+// - Hero data
+const heroData = {
+	title: 'Transparent Pricing, Exceptional Value',
+	subtitle: 'Investment Plans',
+	text: 'We believe great design should be accessible. Choose the engagement model that fits your project scope and budget — no surprises, no hidden fees.'
+}
+// - Brand data
+const brandData = {
+	title: 'Trusted by forward-thinking brands'
+}
+// - FAQ data
+const faqData = {
+	title: 'Everything you need to know',
+	subtitle: 'Frequently Asked Questions'
+}
+// - CTA data
+const ctaData = {
+	title: 'Not sure which plan is right for you?',
+	text: 'Every project is unique. Let us understand your goals and recommend the best engagement model. Book a free consultation to get started.',
+	buttonLink: '/contact',
+	buttonText: 'Book a Free Consultation'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={heroData.title} subtitle={heroData.subtitle} text={heroData.text} />
+	<BasicTable />
+	<Brand title={brandData.title} />
+	<Faq subtitle={faqData.subtitle} title={faqData.title} />
+	<CTA
+		title={ctaData.title}
+		text={ctaData.text}
+		buttonLink={ctaData.buttonLink}
+		buttonText={ctaData.buttonText}
+	/>
+</Layout>

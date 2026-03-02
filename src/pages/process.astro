@@ -1,0 +1,146 @@
+---
+// Work Process Page — Suspended Suspended UI/UX Design Agency
+// ------------
+
+// Components
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/blocks/hero/SimpleHeroBasic.astro'
+import ScrollSpySteps from '../components/blocks/onboarding/Steps.astro'
+import SectionSticky from '../components/blocks/basic/StickySidebar.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+import Header from '../components/ui/Header.astro'
+import DecorationBorder from '../components/ui/DecorationBorder.astro'
+import CTA from '../components/blocks/cta/CTAPrimary.astro'
+
+// Content
+const SEO = {
+	title: 'Our Process | Suspended Suspended — UI/UX Design Agency',
+	description:
+		'Discover our proven 4-step design process: Discovery, Strategy, Design, and Launch. Learn how we transform ideas into user-centered digital products.'
+}
+
+const heroData = {
+	title: 'A proven process that turns ideas into impactful products',
+	subtitle: 'Our Work Process',
+	text: 'We follow a structured yet flexible design process that ensures every project is grounded in research, refined through iteration, and delivered with precision.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		title={heroData.title}
+		subtitle={heroData.subtitle}
+		text={heroData.text}
+	/>
+
+	<ScrollSpySteps />
+
+	<!-- Why Our Process Works -->
+	<SectionSticky>
+		<Header
+			title="Why Our Process Works"
+			subtitle="The Difference"
+			headingLevel="h2"
+			titleClasses="bg-white dark:bg-neutral-950"
+			slot="sidebar"
+		/>
+		<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+			<Col span="12" style="transparent">
+				<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+					<h3>Research-driven, not assumption-driven</h3>
+					<p>
+						Too many products fail because they are designed based on internal assumptions rather than real user insights. Our process starts with rigorous research — user interviews, data analysis, and competitive audits — so every design decision is backed by evidence.
+					</p>
+					<h3>Iterative by nature</h3>
+					<p>
+						We don't reveal a "big design" at the end and hope for the best. Our iterative approach means you see progress continuously, provide feedback early, and course-correct before investing in development. This saves time, money, and frustration.
+					</p>
+					<h3>Seamless collaboration</h3>
+					<p>
+						We work as an extension of your team. With shared Figma files, regular check-ins, and transparent project tracking, you're always in the loop. No surprises, no black boxes — just a collaborative partnership focused on results.
+					</p>
+					<h3>Built for developers</h3>
+					<p>
+						Our handoff process is legendary. Organized Figma files, annotated specs, component documentation, and direct access to our design team during implementation. We don't just throw designs over the wall — we ensure they're built correctly.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</SectionSticky>
+
+	<!-- Tools & Methods -->
+	<Section>
+		<Row>
+			<Col span="12" classes="pt-16 lg:pt-24 pb-8!">
+				<Header title="Tools & methods we rely on" subtitle="Our Toolkit" headingLevel="h2" titleWidth="max-w-2xl" />
+			</Col>
+		</Row>
+		<Row decorationBorder="top left right bottom" gapY="0" style="transparent">
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Figma</h3>
+					<p class="text-lg leading-8 mb-0">
+						Our primary design tool for wireframes, UI design, prototyping, and design systems. Real-time collaboration makes feedback seamless.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Maze</h3>
+					<p class="text-lg leading-8 mb-0">
+						We use Maze for rapid usability testing, letting us validate designs with real users before a single line of code is written.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Miro</h3>
+					<p class="text-lg leading-8 mb-0">
+						For collaborative workshops, journey mapping, and brainstorming sessions. Miro helps us think big before we design small.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+		</Row>
+		<Row decorationBorder="left right bottom" gapY="0" style="transparent">
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Hotjar & Analytics</h3>
+					<p class="text-lg leading-8 mb-0">
+						We analyze heatmaps, session recordings, and analytics data to understand real user behavior and inform our design decisions.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Lottie & After Effects</h3>
+					<p class="text-lg leading-8 mb-0">
+						For purposeful micro-interactions and animations that guide users, provide feedback, and bring interfaces to life.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Notion & Linear</h3>
+					<p class="text-lg leading-8 mb-0">
+						For project management and documentation. Every task, decision, and deliverable is tracked and accessible to your team.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<CTA
+		title="Ready to see our process in action?"
+		text="Let's start with a free discovery call. We'll learn about your product, your users, and your goals — and show you exactly how our process will bring your vision to life."
+		buttonLink="/contact"
+		buttonText="Book a Discovery Call"
+	/>
+</Layout>

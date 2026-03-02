@@ -1,0 +1,27 @@
+---
+// Project Single Page
+// ------------
+// Description: Displays a single project case study.
+
+// Components
+import Layout from '../../layouts/ProjectLayout.astro'
+
+// Data
+import { getCollection, render } from 'astro:content'
+export async function getStaticPaths() {
+	const projects = await getCollection('projects')
+	return projects.map((entry) => {
+		const projectId = entry.id
+		return {
+			params: { id: projectId },
+			props: { entry }
+		}
+	})
+}
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+
+<Layout frontmatter={entry.data}>
+	<Content />
+</Layout>

@@ -1,0 +1,43 @@
+---
+// Blog Page
+// ------------
+// Description: The blog page is a page that displays all the blog posts.
+
+// Components
+// - Layout
+import Layout from '../../layouts/Layout.astro'
+// - Blocks
+import Hero from '../../components/blocks/hero/SimpleHeroBasic.astro'
+import PostCards from '../../components/blocks/blog/PostCards.astro'
+
+// - Collection
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths({ paginate }: any) {
+	const allPosts = await getCollection('blog', ({ id }) => id)
+	return paginate(allPosts, { pageSize: 100 })
+}
+const { page } = Astro.props as any
+
+// Content
+// - SEO
+const SEO = {
+	title: 'Suspended Suspended | Articles',
+	description:
+		'Read the latest insights on UI/UX design, user research, product strategy, and digital trends from the Suspended Suspended team.'
+}
+
+// Sort blog posts by publication date (newest first)
+const sortedBlogPosts = page.data.sort((a: any, b: any) => {
+	return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+})
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		subtitle="Articles & Insights"
+		title="Design Thinking, Delivered"
+		text="Explore our latest articles on UI/UX design, product strategy, user research, and the craft of building digital experiences that matter."
+	/>
+	<PostCards data={sortedBlogPosts} />
+</Layout>

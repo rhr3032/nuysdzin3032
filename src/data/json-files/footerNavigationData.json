@@ -1,0 +1,50 @@
+{
+"logo": {
+"src": "/logo-light.svg",
+"srcDark": "/logo-dark.svg",
+"alt": "Suspended Suspended logo"
+},
+"footerAbout": {
+"aboutText": "Suspended Suspended — Where strategy meets pixel-perfect design. We craft digital experiences that users love and businesses rely on."
+},
+"footerColumns": [
+{
+"title": "Services",
+"links": [
+{ "label": "UI/UX Design", "href": "/services" },
+{ "label": "Web Design", "href": "/services" },
+{ "label": "Mobile App Design", "href": "/services" },
+{ "label": "Design Systems", "href": "/services" },
+{ "label": "Brand Identity", "href": "/services" }
+]
+},
+{
+"title": "Company",
+"links": [
+{ "label": "About Us", "href": "/about" },
+{ "label": "Our Process", "href": "/process" },
+{ "label": "Projects", "href": "/projects" },
+{ "label": "Articles", "href": "/blog" },
+{ "label": "FAQ", "href": "/faq" },
+{ "label": "Contact", "href": "/contact" }
+]
+},
+{
+"title": "Connect",
+"links": [
+{ "label": "Twitter / X", "href": "https://x.com/" },
+{ "label": "Dribbble", "href": "https://dribbble.com/" },
+{ "label": "Behance", "href": "https://behance.net/" },
+{ "label": "LinkedIn", "href": "https://linkedin.com/" },
+{ "label": "Instagram", "href": "https://instagram.com/" }
+]
+}
+],
+"copyright": {
+"text": "2026 Suspended Suspended. All rights reserved.",
+"legal": [
+{ "label": "Terms & Conditions", "href": "/terms" },
+{ "label": "Privacy Policy", "href": "/privacy" }
+]
+}
+}

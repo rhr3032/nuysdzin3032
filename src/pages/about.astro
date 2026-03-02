@@ -1,0 +1,153 @@
+---
+// About Page — Suspended Suspended UI/UX Design Agency
+// ------------
+
+// Components
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/blocks/hero/SimpleHeroPrimary.astro'
+import Brand from '../components/blocks/brand/Marquee.astro'
+import SectionSticky from '../components/blocks/basic/StickySidebar.astro'
+import TestimonialMasonry from '../components/blocks/testimonials/TestimonialMasonry.astro'
+import CTA from '../components/blocks/cta/CTAPrimary.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+import Header from '../components/ui/Header.astro'
+import DecorationBorder from '../components/ui/DecorationBorder.astro'
+
+// Content
+const SEO = {
+	title: 'About Us | Suspended Suspended — UI/UX Design Agency',
+	description:
+		'Learn about Suspended Suspended — a passionate UI/UX design team dedicated to creating user-centered digital experiences that drive business results.'
+}
+
+const heroData = {
+	title: 'Designing with purpose, delivering with precision',
+	subtitle: 'About Us',
+	text: 'We are a team of designers, researchers, and strategists obsessed with creating digital experiences that feel effortless for users and drive measurable growth for businesses.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		title={heroData.title}
+		subtitle={heroData.subtitle}
+		text={heroData.text}
+		textClasses="max-w-xl!"
+	/>
+
+	<!-- Our Story -->
+	<SectionSticky>
+		<Header
+			title="Our Story"
+			subtitle="Who We Are"
+			headingLevel="h2"
+			titleClasses="bg-white dark:bg-neutral-950"
+			slot="sidebar"
+		/>
+		<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+			<Col span="12" style="transparent">
+				<div class="text-basic bg-white p-8 dark:bg-neutral-950 [&_h3]:text-xl!">
+					<h3>Born from a passion for pixel-perfect craft</h3>
+					<p>
+						Suspended Suspended was founded with a simple belief: great design is not just about aesthetics — it's about solving real problems for real people. We started as a small team of designers frustrated with the gap between beautiful portfolios and actual user outcomes.
+					</p>
+					<p>
+						Today, we are a full-service UI/UX design agency working with startups, scale-ups, and enterprise companies across the globe. We bring together user research, strategic thinking, and world-class visual design to create products that people genuinely enjoy using.
+					</p>
+					<h3>Design that drives business results</h3>
+					<p>
+						We don't design for design's sake. Every wireframe, every prototype, every pixel serves a purpose — whether that's increasing conversion rates, reducing support tickets, or improving user retention. We measure our success by the impact our designs have on your bottom line.
+					</p>
+					<p>
+						Our process is collaborative and transparent. We work as an extension of your team, keeping you involved at every stage from discovery to launch. No black boxes, no surprises — just thoughtful design backed by research and data.
+					</p>
+				</div>
+			</Col>
+		</Row>
+	</SectionSticky>
+
+	<!-- Our Values -->
+	<Section>
+		<Row>
+			<Col span="12" classes="pt-16 lg:pt-24 pb-8!">
+				<Header title="What guides everything we do" subtitle="Our Values" headingLevel="h2" titleWidth="max-w-2xl" />
+			</Col>
+		</Row>
+		<Row decorationBorder="top left right bottom" gapY="0" style="transparent">
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">User-First Always</h3>
+					<p class="text-lg leading-8 mb-0">
+						Every decision starts with the user. We empathize deeply, research thoroughly, and design solutions that feel intuitive from the very first interaction.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Craft Over Shortcuts</h3>
+					<p class="text-lg leading-8 mb-0">
+						We believe in doing things right. Every pixel, every interaction, every transition is considered and refined until it meets our exacting standards.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="4" style="transparent">
+				<div class="relative bg-white p-8 dark:bg-neutral-950 h-full">
+					<h3 class="text-2xl mb-2">Radical Transparency</h3>
+					<p class="text-lg leading-8 mb-0">
+						No hidden agendas. We share our thinking, our process, and our progress openly. Clients are partners, not spectators.
+					</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<!-- Stats -->
+	<Section>
+		<Row decorationBorder="top left right bottom" gapY="0" style="transparent">
+			<Col span="3" style="transparent">
+				<div class="relative bg-white p-8 text-center dark:bg-neutral-950">
+					<p class="h1 mb-0! text-primary-500">150+</p>
+					<p class="h5 mb-0!">Projects Delivered</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="3" style="transparent">
+				<div class="relative bg-white p-8 text-center dark:bg-neutral-950">
+					<p class="h1 mb-0! text-primary-500">40+</p>
+					<p class="h5 mb-0!">Happy Clients</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="3" style="transparent">
+				<div class="relative bg-white p-8 text-center dark:bg-neutral-950">
+					<p class="h1 mb-0! text-primary-500">8+</p>
+					<p class="h5 mb-0!">Years of Experience</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+			<Col span="3" style="transparent">
+				<div class="relative bg-white p-8 text-center dark:bg-neutral-950">
+					<p class="h1 mb-0! text-primary-500">98%</p>
+					<p class="h5 mb-0!">Client Satisfaction</p>
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<Brand title="Trusted by innovative teams worldwide" />
+
+	<TestimonialMasonry title="Hear from teams we have partnered with" subtitle="Client Feedback" />
+
+	<CTA
+		title="Let's create something extraordinary together"
+		text="We're always excited to meet new teams and tackle new challenges. Whether you have a clear vision or just the seed of an idea, let's talk about how great design can transform your product."
+		buttonLink="/contact"
+		buttonText="Start a Project"
+	/>
+</Layout>

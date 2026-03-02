@@ -1,0 +1,100 @@
+{
+"subtitle": "Our Process",
+"title": "From discovery to delivery, designed with purpose.",
+"nav": [
+{ "id": "step-1", "index": "1", "label": "01. Discovery & Research", "color": "#FFEAD0" },
+{ "id": "step-2", "index": "2", "label": "02. Strategy & Architecture", "color": "#F7F2FC" },
+{ "id": "step-3", "index": "3", "label": "03. Design & Prototype", "color": "#EDF8FF" },
+{ "id": "step-4", "index": "4", "label": "04. Test, Refine & Launch", "color": "#FEF0F0" }
+],
+"steps": [
+{
+"id": "step-1",
+"index": "01",
+"title": "We start by deeply understanding your users and goals",
+"subtitle": "step 01",
+"color": "#FFEAD0",
+"body": [
+"Every great design begins with empathy. We immerse ourselves in your business, your audience, and your market. Through stakeholder interviews, user research, competitor analysis, and data audits, we uncover the insights that will drive every design decision.",
+"This phase ensures we're not designing based on assumptions — we're designing based on evidence. The result is a crystal-clear picture of who your users are, what they need, and where the biggest opportunities lie."
+],
+"cta": { "label": "Learn about our research methods", "href": "/services" },
+"media": {
+"front": {
+"src": "/steps/steps/step_01_front.webp",
+"alt": "Discovery & Research phase"
+},
+"back": {
+"src": "/steps/steps/step_01_back.webp",
+"alt": "Discovery & Research phase"
+}
+}
+},
+{
+"id": "step-2",
+"index": "02",
+"title": "We map the blueprint for an intuitive experience",
+"subtitle": "step 02",
+"color": "#F7F2FC",
+"body": [
+"With research in hand, we define the product's information architecture, user flows, and content strategy. We create sitemaps, wireframes, and journey maps that establish how users will navigate and interact with your product.",
+"This strategic foundation prevents costly rework later. Every screen, every interaction, every piece of content is purposefully placed to guide users toward their goals — and yours."
+],
+"cta": { "label": "See our strategic approach", "href": "/process" },
+"media": {
+"front": {
+"src": "/steps/steps/step_02_front.webp",
+"alt": "Strategy & Architecture phase"
+},
+"back": {
+"src": "/steps/steps/step_02_back.webp",
+"alt": "Strategy & Architecture phase"
+}
+}
+},
+{
+"id": "step-3",
+"index": "03",
+"title": "We bring your product to life with pixel-perfect craft",
+"subtitle": "step 03",
+"color": "#EDF8FF",
+"body": [
+"This is where strategy becomes visual. We design high-fidelity interfaces that balance beauty with usability, creating screens that feel intuitive the moment users interact with them. Every color, typeface, and spacing decision is intentional.",
+"We build interactive prototypes that simulate the real experience, letting you click through flows, test interactions, and gather feedback before a single line of code is written. This iterative approach ensures the final product exceeds expectations."
+],
+"cta": { "label": "Explore our design work", "href": "/projects" },
+"media": {
+"front": {
+"src": "/steps/steps/step_03_front.webp",
+"alt": "Design & Prototype phase"
+},
+"back": {
+"src": "/steps/steps/step_03_back.webp",
+"alt": "Design & Prototype phase"
+}
+}
+},
+{
+"id": "step-4",
+"index": "04",
+"title": "We validate, polish, and prepare for a flawless launch",
+"subtitle": "step 04",
+"color": "#FEF0F0",
+"body": [
+"Before launch, we put designs through rigorous usability testing with real users. We identify pain points, gather feedback, and refine every detail until the experience feels effortless. No assumption goes unchecked.",
+"We then prepare comprehensive design handoff documentation for developers, including specs, assets, and interaction notes. We stay involved through implementation, conducting visual QA to ensure the launched product matches our designs perfectly."
+],
+"cta": { "label": "Start your project", "href": "/contact" },
+"media": {
+"front": {
+"src": "/steps/steps/step_02_front.webp",
+"alt": "Test, Refine & Launch phase"
+},
+"back": {
+"src": "/steps/steps/step_02_back.webp",
+"alt": "Test, Refine & Launch phase"
+}
+}
+}
+]
+}

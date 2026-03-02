@@ -1,0 +1,58 @@
+---
+// Contact Info Cards
+// ------------
+// Description: A contact info cards section with a title
+
+// Components
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+import ActionCard from '../../ui/cards/ActionCard.astro'
+import DecorationBorder from '../../ui/DecorationBorder.astro'
+
+// Props
+type Props = {
+title?: string
+}
+const { title = '' } = Astro.props
+---
+
+<Section>
+<Row decorationBorder="top left " gapY="0" style="transparent">
+<Col
+span="12"
+classes="px-8 py-12 relative bg-[url('/bgs/dot-gray-light.svg')] bg-size-[18px] bg-fixed dark:bg-[url('/bgs/dot-gray-dark.svg')] dark:bg-size-[18px] dark:bg-fixed "
+>
+<h2 class="h5 mb-0! text-center leading-0">{title}</h2>
+<DecorationBorder type="bottom" style="dashed" />
+</Col>
+</Row>
+</Section>
+<Section>
+<Row decorationBorder="top left right bottom" gapY="0" style="transparent">
+<Col span="4" style="transparent">
+<ActionCard title="New Projects" link="mailto:hello@suspended.design" linkText="Start a Conversation">
+<p>
+Have a project in mind? Tell us about your product, timeline, and goals — we'll get back
+to you within 24 hours with a tailored approach.
+</p>
+</ActionCard>
+</Col>
+<Col span="4" style="transparent">
+<ActionCard title="Partnerships" link="mailto:partners@suspended.design" linkText="Explore Partnerships">
+<p>
+Interested in collaborating? Whether you're an agency, studio, or tech company, let's
+explore how we can create something great together.
+</p>
+</ActionCard>
+</Col>
+<Col span="4" style="transparent">
+<ActionCard title="General Inquiries" link="mailto:info@suspended.design" linkText="Send a Message">
+<p>
+Questions about our services, careers, or anything else? Drop us a line and our team
+will point you in the right direction.
+</p>
+</ActionCard>
+</Col>
+</Row>
+</Section>

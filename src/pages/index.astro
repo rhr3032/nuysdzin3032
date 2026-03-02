@@ -1,0 +1,70 @@
+---
+// Home Page — Suspended Suspended UI/UX Design Agency
+// ------------
+
+// Components
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/blocks/hero/CenteredHeroCTA.astro'
+import Brand from '../components/blocks/brand/Marquee.astro'
+import Features from '../components/blocks/features/MasonryGrid.astro'
+import ScrollSpySteps from '../components/blocks/onboarding/Steps.astro'
+import TestimonialMasonry from '../components/blocks/testimonials/TestimonialMasonry.astro'
+import Faq from '../components/blocks/faq/StickyFaq.astro'
+import CTA from '../components/blocks/cta/CTAPrimary.astro'
+
+// Content
+const SEO = {
+title: 'Suspended Suspended | UI/UX Design Agency — Crafting Digital Experiences That Convert',
+description:
+'Suspended Suspended is a premium UI/UX design agency. We create user-centered interfaces for web, mobile, and SaaS products that delight users and drive business growth.'
+}
+
+const heroData = {
+title: 'We design experiences users love',
+subtitle: 'UI/UX Design Agency',
+buttonLink: '/contact',
+buttonText: 'Start a Project',
+text: 'We are a boutique UI/UX design agency helping startups, SaaS companies, and enterprises craft digital products that are beautiful, intuitive, and built to convert.'
+}
+
+const brandData = {
+title: 'Trusted by innovative teams worldwide'
+}
+
+const testimonialData = {
+title: 'Hear from teams we have partnered with',
+subtitle: 'Client Feedback'
+}
+
+const faqData = {
+title: 'Frequently Asked Questions',
+subtitle: 'Common Questions'
+}
+
+const ctaData = {
+title: 'Ready to elevate your digital product?',
+text: 'Whether you need a full product redesign, a new mobile app, or a scalable design system — we are here to help. Let us turn your vision into a pixel-perfect reality.',
+buttonLink: '/contact',
+buttonText: 'Start a Project'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+<Hero
+title={heroData.title}
+subtitle={heroData.subtitle}
+buttonLink={heroData.buttonLink}
+buttonText={heroData.buttonText}
+/>
+<Brand title={brandData.title} />
+<Features />
+<ScrollSpySteps />
+<TestimonialMasonry title={testimonialData.title} subtitle={testimonialData.subtitle} />
+<Faq subtitle={faqData.subtitle} title={faqData.title} />
+<CTA
+title={ctaData.title}
+text={ctaData.text}
+buttonLink={ctaData.buttonLink}
+buttonText={ctaData.buttonText}
+/>
+</Layout>

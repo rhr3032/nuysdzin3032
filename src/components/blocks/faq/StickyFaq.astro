@@ -1,0 +1,89 @@
+---
+// Sticky FAQ
+// ------------
+// Description: A sticky FAQ section with a title and a subtitle
+
+// Components
+import SectionSticky from '../../blocks/basic/StickySidebar.astro'
+import Header from '../../ui/Header.astro'
+import DecorationBorder from '../../ui/DecorationBorder.astro'
+
+// Props
+type Props = {
+title?: string
+subtitle?: string
+classes?: string
+}
+const { title = '', subtitle = '', classes = '' } = Astro.props
+---
+
+<SectionSticky classes={`${classes ? classes : ''}`}>
+<Header
+title={title}
+subtitle={subtitle}
+headingLevel="h2"
+titleClasses="bg-white dark:bg-neutral-950 "
+slot="sidebar"
+/>
+
+<div class="faq">
+<div class="faq__item">
+<h3 class="faq__item__title">How long does a typical design project take?</h3>
+<p class="faq__item__text">
+Timelines vary based on scope and complexity. A focused landing page or feature design can take 2–3 weeks, while a full product design with research typically takes 6–12 weeks. We'll give you a clear timeline during our discovery call.
+</p>
+<DecorationBorder type="top bottom" style="dashed" />
+</div>
+<div class="faq__item">
+<h3 class="faq__item__title">What's included in the design process?</h3>
+<p class="faq__item__text">
+Every project includes user research, wireframing, high-fidelity UI design, interactive prototyping, and a complete design handoff package. Depending on your plan, we also include usability testing, design systems, and ongoing support.
+</p>
+<DecorationBorder type="top bottom" style="dashed" />
+</div>
+<div class="faq__item">
+<h3 class="faq__item__title">Do you work with startups and small teams?</h3>
+<p class="faq__item__text">
+Absolutely. We love working with startups and early-stage companies. Our Essential plan is specifically designed for MVPs and lean teams who need professional design without enterprise-level budgets.
+</p>
+<DecorationBorder type="top bottom" style="dashed" />
+</div>
+<div class="faq__item">
+<h3 class="faq__item__title">What tools do you use for design?</h3>
+<p class="faq__item__text">
+We primarily work in Figma for design and prototyping, allowing seamless collaboration and real-time feedback from your team. We also use tools like Maze for usability testing, Miro for workshops, and Lottie for animations.
+</p>
+<DecorationBorder type="top bottom" style="dashed" />
+</div>
+<div class="faq__item">
+<h3 class="faq__item__title">Can you redesign our existing product?</h3>
+<p class="faq__item__text">
+Yes, product redesigns are one of our core strengths. We start with a thorough UX audit of your current product, identify pain points through user research and analytics, and then design an improved experience that drives measurable results.
+</p>
+<DecorationBorder type="top bottom" style="dashed" />
+</div>
+<div class="faq__item">
+<h3 class="faq__item__title">Do you handle front-end development?</h3>
+<p class="faq__item__text">
+Our focus is on UI/UX design, but we work closely with development teams. We provide pixel-perfect design specs, organized component libraries, and stay involved during implementation to ensure the final build matches our designs.
+</p>
+<DecorationBorder type="top bottom" style="dashed" />
+</div>
+</div>
+</SectionSticky>
+
+<style>
+@reference '../../../styles/global.css';
+.faq {
+@apply flex flex-col gap-6 lg:gap-8;
+}
+.faq__item {
+@apply relative bg-white p-6 lg:p-8 dark:bg-neutral-950;
+}
+.faq__item__title {
+@apply mb-2 text-2xl leading-8;
+}
+.faq__item__text {
+@apply mb-0 text-xl leading-8;
+}
+</style>

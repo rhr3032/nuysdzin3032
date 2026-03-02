@@ -1,0 +1,115 @@
+---
+// Project Layout
+// ------------
+// Description: A layout for project case studies
+
+const { frontmatter } = Astro.props
+
+// Components
+import Layout from './Layout.astro'
+import Col from '../components/ui/Col.astro'
+import Row from '../components/ui/Row.astro'
+import Section from '../components/ui/Section.astro'
+import Hero from '../components/blocks/hero/SimpleHeroBasic.astro'
+import CTAPrimary from '../components/blocks/cta/CTAPrimary.astro'
+import DecorationBorder from '../components/ui/DecorationBorder.astro'
+import Tag from '../components/ui/Tag.astro'
+
+// CTA data
+const CTA = {
+	title: 'Ready to start your project?',
+	text: 'Every great product starts with a conversation. Tell us about your project, your users, and your goals — and we will show you how design can make all the difference.',
+	buttonText: 'Start a Project',
+	buttonLink: '/contact'
+}
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+	<Hero
+		subtitle={`${frontmatter.client} — ${frontmatter.category}`}
+		title={frontmatter.title}
+		text={frontmatter.description}
+		titleWidth="max-w-full"
+	/>
+	{
+		frontmatter.image && (
+			<Section>
+				<Row>
+					<Col span="12">
+						<div class="parallax h-96 w-full lg:h-[680px]">
+							<img
+								class="h-[calc(100%+50px)] w-full object-cover will-change-transform"
+								src={frontmatter.image}
+								alt={frontmatter.title}
+							/>
+						</div>
+					</Col>
+				</Row>
+			</Section>
+		)
+	}
+
+	<!-- Project Details Sidebar -->
+	<Section>
+		<Row style="transparent" decorationBorder="top left right bottom">
+			<Col span="8" style="transparent" classes="border-r border-neutral-200 dark:border-neutral-700">
+				<div class="basic-text relative max-w-5xl bg-white text-xl leading-9 dark:bg-neutral-950 [&_p]:px-8 [&_p]:first:pt-6 p-4">
+					<slot />
+					<DecorationBorder type="top right bottom left" style="solid" />
+				</div>
+			</Col>
+			<Col span="4" style="transparent">
+				<div class="bg-white p-8 dark:bg-neutral-950 sticky top-28">
+					{frontmatter.year && (
+						<div class="mb-6">
+							<p class="h5 mb-1!">Year</p>
+							<p class="text-lg mb-0!">{frontmatter.year}</p>
+						</div>
+					)}
+					{frontmatter.client && (
+						<div class="mb-6">
+							<p class="h5 mb-1!">Client</p>
+							<p class="text-lg mb-0!">{frontmatter.client}</p>
+						</div>
+					)}
+					{frontmatter.category && (
+						<div class="mb-6">
+							<p class="h5 mb-1!">Category</p>
+							<p class="text-lg mb-0!">{frontmatter.category}</p>
+						</div>
+					)}
+					{frontmatter.services && frontmatter.services.length > 0 && (
+						<div class="mb-6">
+							<p class="h5 mb-2!">Services</p>
+							<div class="flex flex-wrap gap-2">
+								{frontmatter.services.map((service: string) => (
+									<Tag>{service}</Tag>
+								))}
+							</div>
+						</div>
+					)}
+					{frontmatter.results && frontmatter.results.length > 0 && (
+						<div class="mb-0">
+							<p class="h5 mb-2!">Key Results</p>
+							<ul class="list-none! m-0! p-0!">
+								{frontmatter.results.map((result: string) => (
+									<li class="text-primary-600 font-medium text-lg mb-2 ml-0! pl-0! list-none!">
+										{result}
+									</li>
+								))}
+							</ul>
+						</div>
+					)}
+					<DecorationBorder type="all" style="dashed" />
+				</div>
+			</Col>
+		</Row>
+	</Section>
+
+	<CTAPrimary
+		title={CTA.title}
+		text={CTA.text}
+		buttonText={CTA.buttonText}
+		buttonLink={CTA.buttonLink}
+	/>
+</Layout>

@@ -1,0 +1,45 @@
+---
+// FAQ Page
+// ------------
+// Description: Standalone FAQ page for the design agency
+
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - Blocks
+import Hero from '../components/blocks/hero/SimpleHeroBasic.astro'
+import FaqBlock from '../components/blocks/faq/StickyFaq.astro'
+import CTA from '../components/blocks/cta/CTAPrimary.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'Suspended Suspended | FAQ',
+	description:
+		'Find answers to common questions about our UI/UX design process, timelines, pricing, tools, and how we collaborate with clients.'
+}
+// - Hero data
+const heroData = {
+	title: 'Answers to Your Most Common Questions',
+	subtitle: 'Frequently Asked Questions',
+	text: 'We know choosing a design partner is a big decision. Here are answers to the questions we hear most often — and if yours isn\'t listed, just reach out.'
+}
+// - CTA data
+const ctaData = {
+	title: 'Still have questions?',
+	text: 'We\'re happy to walk you through our process, discuss your project scope, or answer anything else on your mind. Let\'s chat.',
+	buttonLink: '/contact',
+	buttonText: 'Get in Touch'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={heroData.title} subtitle={heroData.subtitle} text={heroData.text} />
+	<FaqBlock subtitle="Common Questions" title="Everything you need to know" />
+	<CTA
+		title={ctaData.title}
+		text={ctaData.text}
+		buttonLink={ctaData.buttonLink}
+		buttonText={ctaData.buttonText}
+	/>
+</Layout>

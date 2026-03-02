@@ -1,0 +1,116 @@
+---
+// Services Page — Suspended Suspended UI/UX Design Agency
+// ------------
+
+// Components
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/blocks/hero/SimpleHeroPrimary.astro'
+import SectionSticky from '../components/blocks/basic/StickySidebar.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+import Header from '../components/ui/Header.astro'
+import Button from '../components/ui/Button.astro'
+import DecorationBorder from '../components/ui/DecorationBorder.astro'
+import CTA from '../components/blocks/cta/CTAPrimary.astro'
+import Brand from '../components/blocks/brand/Marquee.astro'
+
+// Content
+const SEO = {
+	title: 'Services | Suspended Suspended — UI/UX Design Agency',
+	description:
+		'Explore our comprehensive UI/UX design services: user research, wireframing, UI design, prototyping, design systems, mobile app design, and more.'
+}
+
+const heroData = {
+	title: 'Design services built around your users and your goals',
+	subtitle: 'Our Services',
+	text: 'From early-stage research to pixel-perfect interfaces, we offer end-to-end UI/UX design services that transform complex challenges into delightful digital experiences.'
+}
+
+const services = [
+	{
+		title: 'UI/UX Design',
+		subtitle: 'Core Service',
+		description: 'Our flagship offering. We design complete user interfaces and experiences for web and mobile products — from initial wireframes through high-fidelity mockups and interactive prototypes.',
+		features: ['User flow mapping', 'Wireframing & layout design', 'High-fidelity UI design', 'Interactive prototyping', 'Responsive design (all breakpoints)', 'Design handoff & developer specs']
+	},
+	{
+		title: 'User Research & Testing',
+		subtitle: 'Discovery',
+		description: 'Great design starts with deep understanding. We conduct thorough user research to uncover insights that inform every design decision, ensuring your product resonates with real users.',
+		features: ['User interviews & surveys', 'Persona development', 'Competitive & heuristic analysis', 'Usability testing', 'A/B testing strategy', 'Analytics & behavior audits']
+	},
+	{
+		title: 'Design Systems',
+		subtitle: 'Scale',
+		description: 'We build comprehensive design systems that ensure visual and functional consistency across your entire product ecosystem. Scalable, documented, and developer-friendly.',
+		features: ['Component libraries (Figma)', 'Design tokens & variables', 'Style guides & documentation', 'Accessibility standards (WCAG)', 'Naming conventions & structure', 'Developer handoff guidelines']
+	},
+	{
+		title: 'Mobile App Design',
+		subtitle: 'Native & Cross-Platform',
+		description: 'We design mobile experiences that feel native and intuitive — whether you are building for iOS, Android, or both. Every tap, swipe, and gesture is carefully considered.',
+		features: ['iOS & Android design patterns', 'Cross-platform consistency', 'Gesture & interaction design', 'App store asset design', 'Onboarding flow design', 'Push notification UX']
+	},
+	{
+		title: 'Web Design & Landing Pages',
+		subtitle: 'Conversion-Focused',
+		description: 'We design websites and landing pages optimized for conversion. Every element — from hero sections to CTAs — is strategically placed to guide visitors toward action.',
+		features: ['Marketing site design', 'Landing page optimization', 'SaaS website design', 'Blog & content layouts', 'SEO-friendly structure', 'Performance-optimized assets']
+	},
+	{
+		title: 'Brand & Visual Identity',
+		subtitle: 'Foundation',
+		description: "We craft visual identities that communicate your brand's personality and values across every digital touchpoint — logos, color systems, typography, and comprehensive brand guidelines.",
+		features: ['Logo & mark design', 'Color palette development', 'Typography selection', 'Iconography systems', 'Brand guidelines document', 'Social media templates']
+	}
+]
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		title={heroData.title}
+		subtitle={heroData.subtitle}
+		text={heroData.text}
+		textClasses="max-w-xl!"
+	/>
+
+	{services.map((service) => (
+		<SectionSticky>
+			<Header
+				title={service.title}
+				subtitle={service.subtitle}
+				headingLevel="h2"
+				titleClasses="bg-white dark:bg-neutral-950"
+				slot="sidebar"
+			/>
+			<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+				<Col span="12" style="transparent">
+					<div class="bg-white p-8 dark:bg-neutral-950">
+						<p class="text-xl leading-9 mb-6">{service.description}</p>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							{service.features.map((feature) => (
+								<div class="flex items-start gap-3">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 mt-1 text-primary-500 shrink-0">
+										<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+									</svg>
+									<span class="text-lg">{feature}</span>
+								</div>
+							))}
+						</div>
+					</div>
+				</Col>
+			</Row>
+		</SectionSticky>
+	))}
+
+	<Brand title="Trusted by innovative teams worldwide" />
+
+	<CTA
+		title="Have a project in mind? Let's talk."
+		text="Every great product starts with a conversation. Tell us about your project, your users, and your goals — and we'll show you how thoughtful design can make all the difference."
+		buttonLink="/contact"
+		buttonText="Start a Project"
+	/>
+</Layout>

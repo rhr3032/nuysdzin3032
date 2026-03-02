@@ -1,0 +1,41 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - Blocks
+import Hero from '../components/blocks/hero/SimpleHeroPrimary.astro'
+import BasicFeatures from '../components/blocks/features/StickyBasicFeatures.astro'
+import CTA from '../components/blocks/cta/CTAPrimary.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'Suspended Suspended | Design Capabilities',
+	description:
+		'Explore the full range of UI/UX design capabilities we bring to every project — from user research and wireframing to polished interfaces and design systems.'
+}
+// - Hero
+const heroData = {
+	title: 'Design Capabilities That Drive Results',
+	subtitle: 'What We Bring to the Table',
+	text: 'Every project benefits from our full spectrum of design expertise. Explore the tools, methods, and skills we use to create experiences users love.'
+}
+// - CTA
+const ctaData = {
+	title: 'Ready to put these capabilities to work?',
+	text: 'Tell us about your project and we will show you exactly how our design expertise can help you achieve your goals — faster and with more confidence.',
+	buttonLink: '/contact',
+	buttonText: 'Start a Project'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={heroData.title} subtitle={heroData.subtitle} text={heroData.text} />
+	<BasicFeatures />
+	<CTA
+		title={ctaData.title}
+		text={ctaData.text}
+		buttonLink={ctaData.buttonLink}
+		buttonText={ctaData.buttonText}
+	/>
+</Layout>

@@ -1,0 +1,140 @@
+[
+{
+"title": "User Research & Strategy",
+"subtitle": "Discovery",
+"features": [
+{
+"title": "User Interviews",
+"description": "We conduct in-depth interviews with your target audience to uncover pain points, motivations, and behaviors that inform every design decision we make.",
+"icon": "chat-bubble-left-ellipsis"
+},
+{
+"title": "Competitive Analysis",
+"description": "We analyze your competitors' digital presence to identify gaps, opportunities, and industry benchmarks that give your product a strategic edge.",
+"icon": "chart-bar"
+},
+{
+"title": "User Personas",
+"description": "We create detailed user personas based on real data, helping your team stay aligned on who you're designing for throughout the entire project.",
+"icon": "user-group"
+},
+{
+"title": "Journey Mapping",
+"description": "We visualize the complete user journey from first touch to conversion, identifying friction points and opportunities for delight at every stage.",
+"icon": "map"
+},
+{
+"title": "Usability Testing",
+"description": "We test prototypes with real users to validate design decisions early, saving time and budget while ensuring the final product truly resonates.",
+"icon": "cursor-arrow-ripple"
+},
+{
+"title": "Analytics Review",
+"description": "We dive into your existing analytics to understand user behavior patterns, drop-off points, and conversion bottlenecks that need design attention.",
+"icon": "presentation-chart-line"
+},
+{
+"title": "Stakeholder Workshops",
+"description": "We facilitate collaborative workshops with your team to align on business goals, user needs, and project priorities before a single pixel is placed.",
+"icon": "light-bulb"
+},
+{
+"title": "Information Architecture",
+"description": "We organize and structure your content and features in a way that feels intuitive to users, creating clear navigation paths and logical hierarchies.",
+"icon": "squares-2x2"
+}
+]
+},
+{
+"title": "Interface & Visual Design",
+"subtitle": "Craft",
+"features": [
+{
+"title": "Wireframing",
+"description": "We create low-fidelity wireframes that define layout, content placement, and user flow before committing to visual design, saving time and iterations.",
+"icon": "rectangle-stack"
+},
+{
+"title": "High-Fidelity Mockups",
+"description": "We design pixel-perfect, production-ready screen designs that showcase your brand's visual identity while optimizing for usability and conversion.",
+"icon": "paint-brush"
+},
+{
+"title": "Interactive Prototypes",
+"description": "We build clickable prototypes that simulate the final experience, letting stakeholders and users test interactions before development begins.",
+"icon": "cursor-arrow-rays"
+},
+{
+"title": "Design Systems",
+"description": "We create comprehensive design systems with reusable components, tokens, and guidelines that ensure consistency and accelerate future development.",
+"icon": "swatch"
+},
+{
+"title": "Responsive Design",
+"description": "Every design we create works beautifully across all devices and screen sizes, ensuring a seamless experience from desktop to mobile.",
+"icon": "device-phone-mobile"
+},
+{
+"title": "Motion & Micro-interactions",
+"description": "We add purposeful animations and micro-interactions that guide users, provide feedback, and bring your interface to life without overwhelming them.",
+"icon": "play"
+},
+{
+"title": "Accessibility (WCAG)",
+"description": "We design with accessibility in mind from day one, ensuring your product meets WCAG standards and is usable by everyone, regardless of ability.",
+"icon": "eye"
+},
+{
+"title": "Brand Integration",
+"description": "We seamlessly weave your brand identity — colors, typography, voice — into every screen, creating a cohesive experience that reinforces brand recognition.",
+"icon": "sparkles"
+}
+]
+},
+{
+"title": "Development & Delivery",
+"subtitle": "Launch",
+"features": [
+{
+"title": "Design-to-Dev Handoff",
+"description": "We provide developers with organized, annotated design files, specs, and assets that make implementation seamless and pixel-accurate.",
+"icon": "code-bracket"
+},
+{
+"title": "Front-End Collaboration",
+"description": "We work closely with your development team to ensure every interaction, animation, and layout is implemented exactly as designed.",
+"icon": "users"
+},
+{
+"title": "Quality Assurance",
+"description": "We review the implemented product against our designs, catching visual inconsistencies and interaction bugs before launch.",
+"icon": "check-badge"
+},
+{
+"title": "Performance Optimization",
+"description": "We optimize image assets, reduce layout complexity, and ensure designs support fast load times and smooth performance across devices.",
+"icon": "bolt"
+},
+{
+"title": "CMS Integration",
+"description": "We design flexible layouts and components that integrate smoothly with popular CMS platforms, making content management effortless for your team.",
+"icon": "cog-6-tooth"
+},
+{
+"title": "Launch Support",
+"description": "We stay involved through launch day and beyond, providing design support during deployment and addressing any visual issues that arise.",
+"icon": "rocket-launch"
+},
+{
+"title": "Post-Launch Analytics",
+"description": "We monitor user behavior after launch to identify areas for improvement, ensuring your product continues to evolve based on real data.",
+"icon": "chart-bar-square"
+},
+{
+"title": "Ongoing Design Retainers",
+"description": "We offer flexible retainer packages for ongoing design work — feature updates, new pages, A/B testing variants, and continuous improvements.",
+"icon": "arrow-path"
+}
+]
+}
+]

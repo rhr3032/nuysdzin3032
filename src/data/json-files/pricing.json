@@ -1,0 +1,75 @@
+{
+"currency": "USD",
+"billing_toggle": ["annually", "monthly"],
+"note": "All plans include a discovery call. No hidden fees.",
+"plans": [
+{
+"id": "starter",
+"name": "Essential",
+"tagline": "Perfect for startups & MVPs",
+"prices": {
+"annually": 2499,
+"monthly": 2999
+},
+"prices_notes": {
+"annually": "/month, billed annually",
+"monthly": "/month, billed monthly"
+},
+"cta": { "label": "Get Started", "href": "/contact?plan=essential" },
+"features": [
+"Up to 5 screens / pages designed",
+"Wireframes & user flows",
+"High-fidelity UI mockups",
+"1 round of revisions",
+"Mobile-responsive design",
+"Design file handoff (Figma)"
+]
+},
+{
+"id": "professional",
+"name": "Professional",
+"tagline": "For growing businesses & products",
+"prices": {
+"annually": 4999,
+"monthly": 5999
+},
+"prices_notes": {
+"annually": "/month, billed annually",
+"monthly": "/month, billed monthly"
+},
+"cta": { "label": "Get Started", "href": "/contact?plan=professional" },
+"tag": "Most Popular",
+"featured": true,
+"features": [
+"Up to 15 screens / pages designed",
+"User research & persona creation",
+"Wireframes, prototypes & user flows",
+"High-fidelity UI with design system",
+"3 rounds of revisions",
+"Usability testing with real users"
+]
+},
+{
+"id": "enterprise",
+"name": "Enterprise",
+"tagline": "Full-scale design partnership",
+"prices": {
+"annually": 9999,
+"monthly": 11999
+},
+"prices_notes": {
+"annually": "/month, billed annually",
+"monthly": "/month, billed monthly"
+},
+"cta": { "label": "Contact Us", "href": "/contact?plan=enterprise" },
+"features": [
+"Unlimited screens & pages",
+"Full UX research & strategy",
+"Complete design system & component library",
+"Interactive prototypes & animations",
+"Unlimited revisions",
+"Dedicated design team & project manager"
+]
+}
+]
+}

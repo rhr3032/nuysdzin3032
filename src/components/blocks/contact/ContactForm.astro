@@ -1,0 +1,203 @@
+---
+// Contact Form Component
+// ------------
+// Description: A styled contact form with name, email, subject, and message fields.
+
+// Components
+import SectionSticky from '../basic/StickySidebarTransparent.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+import Header from '../../ui/Header.astro'
+import Button from '../../ui/Button.astro'
+import DecorationBorder from '../../ui/DecorationBorder.astro'
+
+// Props
+type Props = {
+	title?: string
+	subtitle?: string
+}
+
+const {
+	title = 'Tell Us About Your Project',
+	subtitle = 'Send a Message'
+} = Astro.props
+---
+
+<SectionSticky>
+	<Header
+		title={title}
+		subtitle={subtitle}
+		headingLevel="h2"
+		titleClasses="bg-white dark:bg-neutral-950"
+		slot="sidebar"
+	/>
+	<Row decorationBorder="top bottom" decorationBorderStyle="dashed" style="transparent">
+		<Col span="12" style="transparent">
+			<form id="contact-form" class="relative bg-white dark:bg-neutral-950 p-6 lg:p-10">
+				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+					<!-- Name -->
+					<div class="form-group">
+						<label for="name" class="form-label">Full Name</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							placeholder="John Doe"
+							class="form-input"
+						/>
+					</div>
+					<!-- Email -->
+					<div class="form-group">
+						<label for="email" class="form-label">Email Address</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							placeholder="john@example.com"
+							class="form-input"
+						/>
+					</div>
+					<!-- Company -->
+					<div class="form-group">
+						<label for="company" class="form-label">Company <span class="text-neutral-400">(optional)</span></label>
+						<input
+							type="text"
+							id="company"
+							name="company"
+							placeholder="Your Company"
+							class="form-input"
+						/>
+					</div>
+					<!-- Budget -->
+					<div class="form-group">
+						<label for="budget" class="form-label">Project Budget</label>
+						<select id="budget" name="budget" class="form-input">
+							<option value="" disabled selected>Select a range</option>
+							<option value="under-5k">Under $5,000</option>
+							<option value="5k-10k">$5,000 – $10,000</option>
+							<option value="10k-25k">$10,000 – $25,000</option>
+							<option value="25k-50k">$25,000 – $50,000</option>
+							<option value="50k-plus">$50,000+</option>
+						</select>
+					</div>
+				</div>
+				<!-- Subject -->
+				<div class="form-group mt-6">
+					<label for="subject" class="form-label">Subject</label>
+					<input
+						type="text"
+						id="subject"
+						name="subject"
+						required
+						placeholder="e.g. New mobile app design project"
+						class="form-input"
+					/>
+				</div>
+				<!-- Service Interest -->
+				<div class="form-group mt-6">
+					<label class="form-label">Services You're Interested In</label>
+					<div class="grid grid-cols-2 gap-3 sm:grid-cols-3 mt-2">
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="ui-ux-design" />
+							<span>UI/UX Design</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="user-research" />
+							<span>User Research</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="design-system" />
+							<span>Design System</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="mobile-app" />
+							<span>Mobile App Design</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="web-design" />
+							<span>Web Design</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="brand-identity" />
+							<span>Brand Identity</span>
+						</label>
+					</div>
+				</div>
+				<!-- Message -->
+				<div class="form-group mt-6">
+					<label for="message" class="form-label">Project Details</label>
+					<textarea
+						id="message"
+						name="message"
+						rows="5"
+						required
+						placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
+						class="form-input resize-none"
+					></textarea>
+				</div>
+				<!-- Submit -->
+				<div class="mt-8">
+					<Button type="submit" style="primary" size="lg" classes="w-full sm:w-auto">
+						Send Message
+					</Button>
+				</div>
+				<!-- Success message (hidden by default) -->
+				<div id="form-success" class="hidden mt-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-300 text-sm">
+					Thank you! Your message has been sent. We'll get back to you within 1–2 business days.
+				</div>
+				<DecorationBorder type="all" style="solid" />
+			</form>
+		</Col>
+	</Row>
+</SectionSticky>
+
+<script is:inline>
+	document.getElementById('contact-form')?.addEventListener('submit', function (e) {
+		e.preventDefault()
+		const form = e.target
+		const successMsg = document.getElementById('form-success')
+		if (successMsg) {
+			successMsg.classList.remove('hidden')
+			form.reset()
+			setTimeout(() => {
+				successMsg.classList.add('hidden')
+			}, 6000)
+		}
+	})
+</script>
+
+<style>
+	@reference '../../../styles/global.css';
+	.form-group {
+		@apply flex flex-col gap-1.5;
+	}
+	.form-label {
+		@apply text-sm font-medium text-neutral-700 dark:text-neutral-300;
+	}
+	.form-input {
+		@apply w-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-base text-neutral-900 outline-none transition-all
+			placeholder:text-neutral-400
+			focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
+			dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100 dark:placeholder:text-neutral-500 dark:focus:border-primary-400 dark:focus:ring-primary-400/20;
+	}
+	.form-input:is(select) {
+		@apply appearance-none pr-10;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239ca3af'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+		background-size: 1.25rem;
+		background-position: right 0.75rem center;
+		background-repeat: no-repeat;
+	}
+	.form-checkbox {
+		@apply flex cursor-pointer items-center gap-2 border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-sm text-neutral-700 transition-all
+			hover:border-primary-300 hover:bg-primary-50
+			has-[:checked]:border-primary-500 has-[:checked]:bg-primary-50 has-[:checked]:text-primary-700
+			dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300
+			dark:hover:border-primary-500 dark:hover:bg-primary-900/30
+			dark:has-[:checked]:border-primary-400 dark:has-[:checked]:bg-primary-900/30 dark:has-[:checked]:text-primary-300;
+	}
+	.form-checkbox input[type='checkbox'] {
+		@apply sr-only;
+	}
+</style>

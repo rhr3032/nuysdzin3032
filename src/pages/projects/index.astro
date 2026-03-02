@@ -1,0 +1,36 @@
+---
+// Projects Page — Suspended Suspended UI/UX Design Agency
+// ------------
+
+// Components
+import Layout from '../../layouts/Layout.astro'
+import Hero from '../../components/blocks/hero/SimpleHeroBasic.astro'
+import ProjectCards from '../../components/blocks/projects/ProjectCards.astro'
+import CTA from '../../components/blocks/cta/CTAPrimary.astro'
+
+// Data
+import { getCollection } from 'astro:content'
+const allProjects = await getCollection('projects')
+
+// Content
+const SEO = {
+	title: 'Projects | Suspended Suspended — UI/UX Design Agency',
+	description:
+		'Explore our portfolio of UI/UX design projects — SaaS dashboards, mobile apps, e-commerce platforms, and more. See how we turn complex challenges into beautiful, user-centered products.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		subtitle="Our Work"
+		title="Projects that speak for themselves"
+		text="From early-stage startups to enterprise platforms, explore the work we're proud of. Each project represents a unique challenge solved through research-driven design."
+	/>
+	<ProjectCards data={allProjects} />
+	<CTA
+		title="Have a project in mind?"
+		text="We'd love to hear about it. Whether you need a complete product design, a UX audit, or a design system — let's start a conversation about what great design can do for your business."
+		buttonLink="/contact"
+		buttonText="Start a Project"
+	/>
+</Layout>
