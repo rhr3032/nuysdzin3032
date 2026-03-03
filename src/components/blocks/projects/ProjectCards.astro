@@ -19,10 +19,10 @@ const { data: projects } = Astro.props
 		{
 			projects.map((project: any, index: number) => {
 				return (
-					<Col span={index === 0 || index === 1 ? '6' : '4'}>
+					<Col span={index < 4 ? '6' : '4'}>
 						<ProjectCard
 							title={project.data.title}
-							image={index < 2 && project.data.thumbnail ? project.data.thumbnail : ''}
+							image={index < 4 && project.data.thumbnail ? project.data.thumbnail : ''}
 							link={`/projects/${project.id}`}
 							client={project.data.client}
 							category={project.data.category}

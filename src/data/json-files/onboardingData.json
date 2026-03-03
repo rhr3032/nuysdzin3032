@@ -5,7 +5,8 @@
 { "id": "step-1", "index": "1", "label": "01. Discovery & Research", "color": "#FFEAD0" },
 { "id": "step-2", "index": "2", "label": "02. Strategy & Architecture", "color": "#F7F2FC" },
 { "id": "step-3", "index": "3", "label": "03. Design & Prototype", "color": "#EDF8FF" },
-{ "id": "step-4", "index": "4", "label": "04. Test, Refine & Launch", "color": "#FEF0F0" }
+{ "id": "step-4", "index": "4", "label": "04. Test & Validate", "color": "#FEF0F0" },
+{ "id": "step-5", "index": "5", "label": "05. Launch & Evolve", "color": "#E8F5E9" }
 ],
 "steps": [
 {
@@ -77,22 +78,44 @@
 {
 "id": "step-4",
 "index": "04",
-"title": "We validate, polish, and prepare for a flawless launch",
+"title": "We validate every detail through rigorous user testing",
 "subtitle": "step 04",
 "color": "#FEF0F0",
 "body": [
-"Before launch, we put designs through rigorous usability testing with real users. We identify pain points, gather feedback, and refine every detail until the experience feels effortless. No assumption goes unchecked.",
-"We then prepare comprehensive design handoff documentation for developers, including specs, assets, and interaction notes. We stay involved through implementation, conducting visual QA to ensure the launched product matches our designs perfectly."
+"Before moving to development, we put designs through rigorous usability testing with real users. We run moderated testing sessions, A/B experiments, and accessibility audits to identify pain points and gather honest feedback.",
+"No assumption goes unchecked. We iterate on every finding — refining interactions, simplifying flows, and polishing edge cases until the experience feels effortless. This validation step is what separates good design from exceptional design."
+],
+"cta": { "label": "See our testing approach", "href": "/features" },
+"media": {
+"front": {
+"src": "/steps/steps/step_04_front.webp",
+"alt": "Test & Validate phase"
+},
+"back": {
+"src": "/steps/steps/step_04_back.webp",
+"alt": "Test & Validate phase"
+}
+}
+},
+{
+"id": "step-5",
+"index": "05",
+"title": "We launch with confidence and keep improving",
+"subtitle": "step 05",
+"color": "#E8F5E9",
+"body": [
+"We prepare comprehensive design handoff documentation for developers — specs, assets, component libraries, and interaction notes. We stay involved through implementation, conducting visual QA to ensure the launched product matches our designs pixel for pixel.",
+"But launch is just the beginning. We monitor real-world usage, analyze post-launch metrics, and identify opportunities for optimization. Through ongoing iteration and data-driven refinements, we help your product evolve and grow long after day one."
 ],
 "cta": { "label": "Start your project", "href": "/contact" },
 "media": {
 "front": {
 "src": "/steps/steps/step_04_front.webp",
-"alt": "Test, Refine & Launch phase"
+"alt": "Launch & Evolve phase"
 },
 "back": {
 "src": "/steps/steps/step_04_back.webp",
-"alt": "Test, Refine & Launch phase"
+"alt": "Launch & Evolve phase"
 }
 }
 }

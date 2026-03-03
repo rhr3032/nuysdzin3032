@@ -1,0 +1,268 @@
+---
+// Project Requirements Modal
+// ------------
+// Description: A popup modal with a project requirements form triggered by "Start a Project" buttons.
+
+import Button from './Button.astro'
+import DecorationBorder from './DecorationBorder.astro'
+---
+
+<!-- Modal Overlay -->
+<div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Start a Project">
+	<div class="modal-backdrop"></div>
+	<div class="modal-container">
+		<div class="modal-content">
+			<!-- Close Button -->
+			<button type="button" class="modal-close" aria-label="Close modal">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+			</button>
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<p class="modal-subtitle">Start a Project</p>
+				<h2 class="modal-title">Tell Us About Your Project</h2>
+			</div>
+
+			<!-- Modal Form -->
+			<form id="project-modal-form" class="modal-form">
+				<div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+					<!-- Name -->
+					<div class="form-group">
+						<label for="modal-name" class="form-label">Full Name</label>
+						<input
+							type="text"
+							id="modal-name"
+							name="name"
+							required
+							placeholder="John Doe"
+							class="form-input"
+						/>
+					</div>
+					<!-- Email -->
+					<div class="form-group">
+						<label for="modal-email" class="form-label">Email Address</label>
+						<input
+							type="email"
+							id="modal-email"
+							name="email"
+							required
+							placeholder="john@example.com"
+							class="form-input"
+						/>
+					</div>
+					<!-- Company -->
+					<div class="form-group">
+						<label for="modal-company" class="form-label">Company <span class="text-neutral-400">(optional)</span></label>
+						<input
+							type="text"
+							id="modal-company"
+							name="company"
+							placeholder="Your Company"
+							class="form-input"
+						/>
+					</div>
+					<!-- Budget -->
+					<div class="form-group">
+						<label for="modal-budget" class="form-label">Project Budget</label>
+						<select id="modal-budget" name="budget" class="form-input">
+							<option value="" disabled selected>Select a range</option>
+							<option value="under-5k">Under $5,000</option>
+							<option value="5k-10k">$5,000 – $10,000</option>
+							<option value="10k-25k">$10,000 – $25,000</option>
+							<option value="25k-50k">$25,000 – $50,000</option>
+							<option value="50k-plus">$50,000+</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Service Interest -->
+				<div class="form-group mt-5">
+					<label class="form-label">Services You're Interested In</label>
+					<div class="grid grid-cols-2 gap-3 sm:grid-cols-3 mt-2">
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="ui-ux-design" />
+							<span>UI/UX Design</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="user-research" />
+							<span>User Research</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="design-system" />
+							<span>Design System</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="mobile-app" />
+							<span>Mobile App Design</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="web-design" />
+							<span>Web Design</span>
+						</label>
+						<label class="form-checkbox">
+							<input type="checkbox" name="services" value="brand-identity" />
+							<span>Brand Identity</span>
+						</label>
+					</div>
+				</div>
+
+				<!-- Message -->
+				<div class="form-group mt-5">
+					<label for="modal-message" class="form-label">Project Details</label>
+					<textarea
+						id="modal-message"
+						name="message"
+						rows="4"
+						required
+						placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
+						class="form-input resize-none"
+					></textarea>
+				</div>
+
+				<!-- Submit -->
+				<div class="mt-6">
+					<Button type="submit" style="primary" size="lg" classes="w-full sm:w-auto">
+						Submit Request
+					</Button>
+				</div>
+
+				<!-- Success message (hidden by default) -->
+				<div id="modal-form-success" class="hidden mt-5 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-300 text-sm">
+					Thank you! Your project request has been submitted. We'll get back to you within 1–2 business days.
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script is:inline>
+(function () {
+	const modal = document.getElementById('project-modal');
+	if (!modal) return;
+
+	const backdrop = modal.querySelector('.modal-backdrop');
+	const closeBtn = modal.querySelector('.modal-close');
+	const form = document.getElementById('project-modal-form');
+	const successMsg = document.getElementById('modal-form-success');
+
+	function openModal() {
+		modal.classList.add('modal--open');
+		modal.setAttribute('aria-hidden', 'false');
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeModal() {
+		modal.classList.remove('modal--open');
+		modal.setAttribute('aria-hidden', 'true');
+		document.body.style.overflow = '';
+	}
+
+	// Open modal from any element with data-modal="project-modal"
+	document.querySelectorAll('[data-modal="project-modal"]').forEach(function (trigger) {
+		trigger.addEventListener('click', function (e) {
+			e.preventDefault();
+			openModal();
+		});
+	});
+
+	// Also handle links with href="#project-modal"
+	document.querySelectorAll('a[href="#project-modal"]').forEach(function (trigger) {
+		trigger.addEventListener('click', function (e) {
+			e.preventDefault();
+			openModal();
+		});
+	});
+
+	// Close on backdrop click
+	backdrop?.addEventListener('click', closeModal);
+
+	// Close on close button
+	closeBtn?.addEventListener('click', closeModal);
+
+	// Close on Escape key
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape' && modal.classList.contains('modal--open')) {
+			closeModal();
+		}
+	});
+
+	// Form submission
+	form?.addEventListener('submit', function (e) {
+		e.preventDefault();
+		if (successMsg) {
+			successMsg.classList.remove('hidden');
+			form.reset();
+			setTimeout(function () {
+				successMsg.classList.add('hidden');
+				closeModal();
+			}, 3000);
+		}
+	});
+})();
+</script>
+
+<style>
+	@reference '../../styles/global.css';
+
+	.modal-overlay {
+		@apply fixed inset-0 z-[100] flex items-center justify-center opacity-0 invisible transition-all duration-300 pointer-events-none;
+	}
+	.modal--open {
+		@apply opacity-100 visible pointer-events-auto;
+	}
+	.modal-backdrop {
+		@apply absolute inset-0 bg-black/60 backdrop-blur-sm;
+	}
+	.modal-container {
+		@apply relative z-10 mx-4 w-full max-w-2xl max-h-[90vh] overflow-y-auto;
+	}
+	.modal-content {
+		@apply relative bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-700 p-6 sm:p-8 lg:p-10;
+	}
+	.modal-close {
+		@apply absolute top-4 right-4 z-10 flex h-10 w-10 cursor-pointer items-center justify-center text-neutral-500 transition-colors hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white;
+	}
+	.modal-header {
+		@apply mb-6 pr-8;
+	}
+	.modal-subtitle {
+		@apply text-sm font-medium uppercase tracking-wider text-primary-500 mb-2;
+	}
+	.modal-title {
+		@apply text-2xl font-bold text-neutral-950 dark:text-white sm:text-3xl;
+	}
+	.modal-form {
+		/* form container */
+	}
+
+	.form-group {
+		@apply flex flex-col gap-1.5;
+	}
+	.form-label {
+		@apply text-sm font-medium text-neutral-700 dark:text-neutral-300;
+	}
+	.form-input {
+		@apply w-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-base text-neutral-900 outline-none transition-all
+			placeholder:text-neutral-400
+			focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
+			dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100 dark:placeholder:text-neutral-500 dark:focus:border-primary-400 dark:focus:ring-primary-400/20;
+	}
+	.form-input:is(select) {
+		@apply appearance-none pr-10;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239ca3af'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+		background-size: 1.25rem;
+		background-position: right 0.75rem center;
+		background-repeat: no-repeat;
+	}
+	.form-checkbox {
+		@apply flex cursor-pointer items-center gap-2 border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-sm text-neutral-700 transition-all
+			hover:border-primary-300 hover:bg-primary-50
+			has-[:checked]:border-primary-500 has-[:checked]:bg-primary-50 has-[:checked]:text-primary-700
+			dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300
+			dark:hover:border-primary-500 dark:hover:bg-primary-900/30
+			dark:has-[:checked]:border-primary-400 dark:has-[:checked]:bg-primary-900/30 dark:has-[:checked]:text-primary-300;
+	}
+	.form-checkbox input[type='checkbox'] {
+		@apply sr-only;
+	}
+</style>

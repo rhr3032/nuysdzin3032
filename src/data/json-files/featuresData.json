@@ -136,5 +136,271 @@
 "icon": "arrow-path"
 }
 ]
+},
+{
+"title": "Product Strategy & Vision",
+"subtitle": "Strategy",
+"features": [
+{
+"title": "Product Roadmap Design",
+"description": "We help you define a clear product roadmap that prioritizes features based on user impact and business value, ensuring every release moves the needle."
+},
+{
+"title": "Market Positioning",
+"description": "We analyze market trends and competitor landscapes to position your product uniquely, identifying the whitespace where your offering can truly shine."
+},
+{
+"title": "Feature Prioritization",
+"description": "Using frameworks like RICE and MoSCoW, we help you decide what to build first — maximizing value while managing scope and resources wisely."
+},
+{
+"title": "MVP Definition",
+"description": "We distill your vision into a lean, focused minimum viable product that validates your core hypothesis and gets to market faster without sacrificing quality."
+},
+{
+"title": "Business Model Canvas",
+"description": "We map out how your product creates, delivers, and captures value — aligning design decisions with revenue models and growth strategies."
+},
+{
+"title": "OKR Alignment",
+"description": "We connect design outcomes to measurable objectives and key results, ensuring every design sprint contributes directly to your business goals."
+},
+{
+"title": "Growth Strategy",
+"description": "We identify design-driven growth levers — from onboarding optimization to referral loops — that help your product scale sustainably."
+},
+{
+"title": "Stakeholder Alignment",
+"description": "We bridge the gap between product, engineering, and business teams through shared artifacts and collaborative workshops that build consensus."
+}
+]
+},
+{
+"title": "Data-Driven Design",
+"subtitle": "Analytics",
+"features": [
+{
+"title": "A/B Testing",
+"description": "We design and execute controlled experiments to compare design variants, letting real user behavior guide decisions instead of assumptions."
+},
+{
+"title": "Heatmap Analysis",
+"description": "We analyze click heatmaps and scroll patterns to understand where users focus attention and where they lose interest on every screen."
+},
+{
+"title": "Conversion Funnel Optimization",
+"description": "We map and optimize every step of your conversion funnel, identifying drop-off points and designing targeted interventions to improve flow-through."
+},
+{
+"title": "Session Recording Review",
+"description": "We watch real user sessions to understand behavior patterns, frustration signals, and navigation habits that quantitative data alone can't reveal."
+},
+{
+"title": "KPI Dashboard Design",
+"description": "We design internal dashboards that give your team clear visibility into key performance indicators, making data accessible and actionable for everyone."
+},
+{
+"title": "Behavioral Segmentation",
+"description": "We segment users by behavior patterns to design personalized experiences that speak to different user groups' unique needs and motivations."
+},
+{
+"title": "Survey & Feedback Design",
+"description": "We create targeted in-app surveys and feedback mechanisms that capture user sentiment at the right moments without disrupting their experience."
+},
+{
+"title": "Data Storytelling",
+"description": "We transform raw data into compelling visual narratives that help stakeholders understand user behavior and make confident design decisions."
+}
+]
+},
+{
+"title": "Mobile Experience Design",
+"subtitle": "Mobile",
+"features": [
+{
+"title": "Native App Design",
+"description": "We design native iOS and Android experiences that follow platform conventions while maintaining your brand identity and unique interaction patterns."
+},
+{
+"title": "Gesture-Based Interactions",
+"description": "We craft intuitive swipe, pinch, and tap interactions that feel natural on touch devices, creating fluid experiences users navigate effortlessly."
+},
+{
+"title": "Offline-First Design",
+"description": "We design experiences that work seamlessly without connectivity, gracefully syncing data when the connection returns — essential for mobile-first products."
+},
+{
+"title": "Push Notification Strategy",
+"description": "We design notification systems that inform and engage without annoying, using smart timing, personalization, and clear opt-in flows."
+},
+{
+"title": "App Onboarding Flows",
+"description": "We create onboarding experiences that get users to their first 'aha moment' as fast as possible, reducing abandonment and boosting activation rates."
+},
+{
+"title": "Thumb-Zone Optimization",
+"description": "We place critical actions within easy thumb reach, designing layouts that account for one-handed use and varying device sizes."
+},
+{
+"title": "App Store Optimization",
+"description": "We design compelling app store screenshots, preview videos, and visual assets that increase download rates and set accurate user expectations."
+},
+{
+"title": "Cross-Platform Consistency",
+"description": "We ensure your product feels cohesive across iOS, Android, and web while respecting each platform's unique conventions and user expectations."
+}
+]
+},
+{
+"title": "Design System & Governance",
+"subtitle": "Systems",
+"features": [
+{
+"title": "Component Libraries",
+"description": "We build comprehensive, modular component libraries that accelerate development, ensure consistency, and scale with your product as it grows."
+},
+{
+"title": "Design Tokens",
+"description": "We define design tokens for colors, spacing, typography, and more — creating a single source of truth that bridges design and code seamlessly."
+},
+{
+"title": "Pattern Documentation",
+"description": "We document every pattern and component with usage guidelines, dos and don'ts, and code snippets so your team can build consistently without guessing."
+},
+{
+"title": "Theming & White-Labeling",
+"description": "We architect design systems with theming support, enabling white-label deployments and brand customization without rebuilding from scratch."
+},
+{
+"title": "Governance Frameworks",
+"description": "We establish contribution guidelines, review processes, and version control strategies that keep your design system healthy as multiple teams use it."
+},
+{
+"title": "Figma to Code Workflows",
+"description": "We set up efficient handoff workflows that translate Figma components directly into production-ready code, minimizing interpretation gaps."
+},
+{
+"title": "Accessibility Standards",
+"description": "We bake accessibility into your design system at the component level — ensuring WCAG compliance is automatic, not an afterthought."
+},
+{
+"title": "System Auditing",
+"description": "We regularly audit your design system for drift, inconsistencies, and unused components, keeping it lean, relevant, and adoption-friendly."
+}
+]
+},
+{
+"title": "Conversion & Growth Design",
+"subtitle": "Growth",
+"features": [
+{
+"title": "Landing Page Optimization",
+"description": "We design high-converting landing pages that communicate value instantly, guide visitors toward action, and reduce bounce rates significantly."
+},
+{
+"title": "Pricing Page Design",
+"description": "We create pricing pages that make plan comparison effortless, highlight value over cost, and nudge users toward your ideal conversion point."
+},
+{
+"title": "Onboarding Optimization",
+"description": "We redesign onboarding flows to reduce time-to-value, guiding new users through setup with progressive disclosure and contextual help."
+},
+{
+"title": "CTA Strategy",
+"description": "We design and position calls-to-action using visual hierarchy, persuasive copy, and behavioral triggers that maximize click-through rates."
+},
+{
+"title": "Social Proof Integration",
+"description": "We strategically place testimonials, case studies, and trust indicators throughout the user journey to build confidence and reduce decision anxiety."
+},
+{
+"title": "Email Template Design",
+"description": "We design responsive email templates for transactional and marketing campaigns that drive engagement and maintain brand consistency across inboxes."
+},
+{
+"title": "Referral Program UX",
+"description": "We design frictionless referral flows that make sharing effortless and rewarding, turning satisfied users into your most effective growth channel."
+},
+{
+"title": "Retention Mechanics",
+"description": "We design engagement loops, streak systems, and re-engagement triggers that keep users coming back and reduce churn over time."
+}
+]
+},
+{
+"title": "Emerging Technology Design",
+"subtitle": "Innovation",
+"features": [
+{
+"title": "AI Interface Design",
+"description": "We design intuitive interfaces for AI-powered products — from conversational UIs to predictive dashboards — making complex AI capabilities feel simple."
+},
+{
+"title": "Voice UI Design",
+"description": "We craft voice interaction flows for smart assistants and voice-enabled apps, designing dialogue patterns that feel natural and handle edge cases gracefully."
+},
+{
+"title": "AR/VR Experience Design",
+"description": "We design immersive augmented and virtual reality experiences for retail, training, and entertainment with intuitive spatial interaction patterns."
+},
+{
+"title": "IoT Dashboard Design",
+"description": "We create dashboards for connected devices that surface the right data at the right time, making complex IoT ecosystems manageable and insightful."
+},
+{
+"title": "Chatbot Conversation Design",
+"description": "We design chatbot personalities and conversation flows that feel helpful and human, handling user intents smoothly while knowing when to escalate."
+},
+{
+"title": "Wearable Interface Design",
+"description": "We design for smartwatches and wearable devices with glanceable information, haptic feedback, and micro-interactions suited to tiny screens."
+},
+{
+"title": "Blockchain & Web3 UX",
+"description": "We simplify the complexity of Web3 — wallet connections, transaction confirmations, and token management — into experiences mainstream users can trust."
+},
+{
+"title": "Multimodal Interaction Design",
+"description": "We design experiences that blend touch, voice, gesture, and visual inputs, creating flexible interfaces that adapt to how users naturally interact."
+}
+]
+},
+{
+"title": "Client Collaboration & Support",
+"subtitle": "Partnership",
+"features": [
+{
+"title": "Dedicated Design Lead",
+"description": "Every project gets a dedicated design lead who serves as your single point of contact — ensuring clear communication and consistent creative direction."
+},
+{
+"title": "Weekly Design Reviews",
+"description": "We hold structured weekly reviews where we present progress, gather feedback, and align on next steps — keeping your project on track and transparent."
+},
+{
+"title": "Collaborative Workshops",
+"description": "We run interactive co-design workshops that bring your team into the creative process, leveraging internal knowledge while building shared ownership."
+},
+{
+"title": "Rapid Iteration Cycles",
+"description": "We work in focused sprint cycles with quick turnarounds, so you see progress fast and have multiple opportunities to steer direction before final delivery."
+},
+{
+"title": "Design Training",
+"description": "We upskill your internal team with workshops on design thinking, Figma workflows, and design system usage so you can maintain momentum after handoff."
+},
+{
+"title": "Flexible Engagement Models",
+"description": "Whether you need a full project team, a design sprint, or ongoing retainer support — we adapt our engagement model to fit your timeline and budget."
+},
+{
+"title": "Transparent Reporting",
+"description": "We provide clear progress reports with time tracking, milestone updates, and budget visibility so you always know exactly where your project stands."
+},
+{
+"title": "Post-Project Support",
+"description": "Our relationship doesn't end at delivery. We offer post-launch support, design tweaks, and strategic advice to help your product keep growing."
+}
+]
 }
 ]

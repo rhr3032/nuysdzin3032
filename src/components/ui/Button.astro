@@ -36,6 +36,7 @@ const isAbsoluteURL = (url: string) => /^https?:\/\//i.test(url)
 				{ ['button--' + `${style}`]: style },
 				{ [`${classes}`]: classes }
 			]}
+			{...(modal ? { 'data-modal': modal } : {})}
 		>
 			<slot />
 		</a>

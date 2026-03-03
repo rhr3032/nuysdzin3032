@@ -57,7 +57,7 @@ const {
 	{
 		headingLevel === 'h1' && (
 			<h1 class:list={[`header__title h1`, { [`${titleClasses}`]: titleClasses }]}>
-				<span class:list={[`header__title-text`, { [`${titleWidth}`]: titleWidth }]}>{title}</span>
+				<span class:list={[`header__title-text`, { [`${titleWidth}`]: titleWidth }]} set:html={title} />
 				<DecorationBorder type="top bottom" extraClasses={decorationClasses} />
 			</h1>
 		)
@@ -65,7 +65,7 @@ const {
 	{
 		headingLevel === 'h2' && (
 			<h2 class:list={[`header__title h2`, { [`${titleClasses}`]: titleClasses }]}>
-				<span class:list={[`header__title-text`, { [`${titleWidth}`]: titleWidth }]}>{title}</span>
+				<span class:list={[`header__title-text`, { [`${titleWidth}`]: titleWidth }]} set:html={title} />
 				<DecorationBorder type="top bottom" extraClasses={decorationClasses} />
 			</h2>
 		)
@@ -73,7 +73,7 @@ const {
 	{
 		headingLevel === 'h3' && (
 			<h3 class:list={[`header__title h3`, { [`${titleClasses}`]: titleClasses }]}>
-				<span class:list={[`header__title-text`, { [`${titleWidth}`]: titleWidth }]}>{title}</span>
+				<span class:list={[`header__title-text`, { [`${titleWidth}`]: titleWidth }]} set:html={title} />
 				<DecorationBorder type="top bottom" extraClasses={decorationClasses} />
 			</h3>
 		)

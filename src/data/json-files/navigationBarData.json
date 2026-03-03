@@ -8,27 +8,19 @@
 { "name": "Home", "link": "/" },
 { "name": "About", "link": "/about" },
 { "name": "Services", "link": "/services" },
-{
-"name": "Work",
-"link": "#",
-"align": "center",
-"submenu": [
-{ "name": "Our Process", "link": "/process" },
 { "name": "Projects", "link": "/projects" },
-{ "name": "Features", "link": "/features" }
-]
-},
 {
 "name": "Resources",
 "link": "#",
 "align": "center",
 "submenu": [
-{ "name": "Articles", "link": "/blog" },
+{ "name": "Features", "link": "/features" },
+{ "name": "Our Process", "link": "/process" },
 { "name": "Pricing", "link": "/pricing" },
-{ "name": "FAQ", "link": "/faq" },
-{ "name": "Contact", "link": "/contact" }
+{ "name": "Articles", "link": "/blog" },
+{ "name": "FAQ", "link": "/faq" }
 ]
 }
 ],
-"navActions": [{ "name": "Start a Project", "link": "/contact" }]
+"navActions": [{ "name": "Contact Us", "link": "/contact" }]
 }

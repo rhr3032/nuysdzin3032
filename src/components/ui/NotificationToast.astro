@@ -15,8 +15,8 @@ type Props = {
 }
 
 const {
-	title = "Designed by NUYsDZ!N",
-	message = `Like what you see? Visit the designer's <a href="https://suspended.design" target="_blank" rel="noreferrer">portfolio</a> for more UI/UX projects, case studies, and creative work.`
+	title = `Designed & Developed by — <a href="https://rhrafi3032.vercel.app/" target="_blank" rel="noreferrer">Raisul R.</a>`,
+	message = `Like what you see? Visit the designer's <a href="https://rhrafi3032.vercel.app/" target="_blank" rel="noreferrer">portfolio</a> for more UI/UX projects, case studies, and creative work.`
 } = Astro.props
 ---
 
@@ -25,7 +25,7 @@ const {
 		<div class="toast__bg-color"></div>
 		<div class="toast__bg-image"></div>
 		<div class="toast__content">
-			<h4 class="toast__title">{title}</h4>
+			<h4 class="toast__title" set:html={title} />
 			<p class="toast__text" set:html={message} />
 		</div>
 		<button type="button" class="toast__close" aria-label="Dismiss notification" data-toast-close>
@@ -109,7 +109,7 @@ const {
 		@apply absolute inset-0 z-0 bg-[url('/bgs/dot-gray-light.svg')] bg-size-[18px] bg-fixed opacity-30;
 	}
 	.toast__title {
-		@apply mb-0 text-base text-white;
+		@apply mb-0 text-base text-white [&>a]:text-white [&>a]:underline [&>a]:decoration-white/60 [&>a]:underline-offset-4 [&>a]:transition hover:[&>a]:decoration-white;
 	}
 	.toast__text {
 		@apply relative z-10 text-sm text-white decoration-dotted [&>a]:font-medium! [&>a]:text-white [&>a]:underline;

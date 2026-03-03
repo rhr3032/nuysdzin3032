@@ -268,8 +268,14 @@ const {
 	.card--pricing-details {
 		@apply font-headings font-medium;
 	}
+	.card--pricing-price {
+		@apply flex flex-col gap-1;
+	}
 	.card--pricing-price__amount {
-		@apply inline-block text-5xl leading-none lg:w-36 lg:text-[4rem];
+		@apply inline-block text-5xl leading-none lg:text-[4rem];
+	}
+	.card--pricing-price__note {
+		@apply block text-sm text-neutral-500;
 	}
 	.card--pricing-features {
 		@apply m-0 list-none px-6 py-8 lg:px-8 lg:py-12 lg:text-xl lg:leading-9 [&_li]:mb-4 [&_li]:ml-0 [&_li]:flex [&_li]:list-none [&_li]:items-start [&_li]:gap-2 [&_li]:pl-0 lg:[&_li]:gap-4;
