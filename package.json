@@ -17,6 +17,8 @@
     "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.7.0",
     "@astrojs/vercel": "^8.0.4",
+    "@splinetool/loader": "^1.12.67",
+    "@splinetool/runtime": "^1.12.67",
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
@@ -34,10 +36,12 @@
     "react-dom": "^19.2.3",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
+    "three": "^0.183.2",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@astrojs/partytown": "^2.1.4",
-    "@tailwindcss/typography": "^0.5.19"
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/three": "^0.183.1"
   }
 }
