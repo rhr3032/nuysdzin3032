@@ -16,6 +16,8 @@ import GoogleTagManagerHead from '../../scripts/googleTagManagerHead.astro'
 import GoogleSearchConsole from '../../scripts/googleSearchConsole.astro'
 // Partials
 import Seo from './partials/Seo.astro'
+// Analytics
+import Analytics from '@vercel/analytics/astro'
 
 // Content
 // - Data
@@ -44,6 +46,7 @@ const {
 	{googleAnalyticsMeasurementID && <GoogleAnalytics />}
 	{googleTagManagerID && <GoogleTagManagerHead />}
 	<GoogleSearchConsole />
+	<Analytics />
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<Seo
